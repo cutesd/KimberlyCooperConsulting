@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    
+    <meta name="description" content="Kimberly Cooper Consulting: Innovative Web Solutions made just for you.  18 years experience developing and managing development of interactive content for web and mobile devices.  JavaScript enthusiast and website guru wanting to bring my years of expertise to you.">
+    <meta name="author" content="Kimberly Cooper">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Kimberly Cooper Consulting</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all">
+    <!-- adobe type kit -->
+    <link rel="stylesheet" href="https://use.typekit.net/lda7tdc.css">
+    <!-- nav css -->
+    <link rel="stylesheet" type="text/css" href="public/css/nav.css">
+    <!-- footer css -->
+    <link rel="stylesheet" type="text/css" href="public/css/footer.css">
+    <!-- main css -->
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <!-- carousel css -->
+    <link rel="stylesheet" type="text/css" href="public/css/home.css">
+
+</head>
+<body>
+
+<!--======================================= MODALS =======================================-->
+
+<!-- MODAL - CONTACT 
+=======================================-->
+
+	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+
+	    <div class="modal-content email-form">
+	      <div class="modal-header form-top">
+	      	<div class="row">
+	      		<div class="col-3">
+	      			<i class="fa fa-envelope-square" aria-hidden="true"></i>
+	      		</div>
+	      		<div class="col-9">
+	      			<h1>Get started with Kimberly</h1>
+	        	<h5 class="modal-title" id="contactModalLabel">Send Your Request to Kimberly</h5>
+	      		</div>
+
+	      	</div>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div> <!-- ./modal-header -->
+	      <div class="modal-body form-bottom">
+	      	<div>
+		 		<form id="inline-form-modal" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">
+		          <input type="hidden" name="recipient" value="kimberly@kimberlycooper.me" /> 
+		          <input type="hidden" name="subject" id="subj" value="KC Consulting:" /> 
+		          <!-- <input type="hidden" name="redirect" value="http://www.kimberlycooper.me/contact/thankyou.html" /> 
+		          <input type="hidden" name="missing_fields_redirect" value="http://www.kimberlycooper.me/contact/error.html" /> --> 
+		          <input type="hidden" name="required" value="name,email,subject" /> 
+
+		          <div class="input-group mb-1">
+					  <span class="input-group-addon tall " id="prepend-name"><i class="fa fa-user-circle-o fa-2" aria-hidden="true"></i></span>
+					  <input type="text" class="form-control tall " name="name" placeholder="Your name" aria-describedby="prepend-name" required>
+					</div>
+					
+					<div class="input-group mb-1">
+					  <span class="input-group-addon tall" id="prepend-email"><i class="fa fa-envelope fa-2" aria-hidden="true"></i></span>
+					  <input type="email" class="form-control tall" name="email" placeholder="Your email address" aria-describedby="prepend-email" required>
+					</div>
+
+					<div class="input-group mb-1">
+					  <span class="input-group-addon tall" id="prepend-phone"><i class="fa fa-phone fa-2" aria-hidden="true"></i></span>
+					  <input type="text" class="form-control tall" name="phone" placeholder="Your phone number" aria-describedby="prepend-phone">
+					</div>
+					
+					<div class="input-group mb-1">
+					  <span class="input-group-addon" id="prepend-message"><i class="fa fa-commenting fa-2" aria-hidden="true"></i></span>
+					  <textarea class="form-control " name="message" id="msg" rows="3" placeholder="How can I help you?" name="message" aria-describedby="prepend-message"></textarea>
+					</div>
+					
+			        <button class="btn btn-outline-danger btn-lg btn-block email-form-button">Submit</button>
+			        
+		        </form>
+
+	    	</div>
+	        
+	        <div class="d-none" id="success-modal">
+	        	<div class="alert alert-success" role="alert">
+				  <p>Thank you, you will receive a response soon!</p>
+				</div> <!-- ./alert -->
+			</div> <!-- ./ success-modal -->
+
+			<div class="d-none" id="error-modal">
+	        	<div class="alert alert-danger" role="alert">
+				  <p class="my-1">I'm sorry, an error has occurred. &nbsp;Please contact Kimberly directly at: kimberly@kimberlycooper.me</p>
+				  <p class="m-0" id="err-moda-txt"></p>
+				</div> <!-- ./alert -->
+			</div> <!-- ./ error-modal -->
+
+	      </div> <!-- ./modal-body -->
+	      
+	    </div> <!-- ./modal-content -->
+	  </div> <!-- ./modal-dialog -->
+
+	</div> <!-- ./modal -->
+
+
+<!-- MODAL - SCHEDULER 
+=======================================-->
+
+<div class="modal fade scheduler-modal" tabindex="-1" role="dialog" aria-labelledby="schedulerModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <div class="embed-responsive embed-responsive-16by9" id="acuity">
+
+	  <iframe src="https://app.acuityscheduling.com/schedule.php?owner=14742789&appointmentType=5080499" frameBorder="0"></iframe>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL - RESUME 
+=======================================-->
+
+<div class="modal fade resume-modal" tabindex="-1" role="dialog" aria-labelledby="schedulerModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <div class="embed-responsive embed-responsive-16by9" id="acuity">
+
+	  <iframe src="https://docs.google.com/document/d/e/2PACX-1vT2j_MZEqXcFi69QeVc7qH7zW8S7l90iUHdsdmS_U-oHGH464pSud6LMKuYSzIxyJ7KtbrmETSKVZTu/pub?embedded=true" width="100%" height="1075" frameBorder="0"></iframe>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	</div>
+    </div>
+  </div>
+</div>
+
+<!--===================================== ./ MODAL =======================================-->
+<!--======================================================================================-->
+
+
+
+<!-- NAVBAR 
+=======================================-->
+
+	<nav id="navbar" class="navbar fixed-top navbar-expand navbar-light bg-light">
+    	<a class="navbar-brand" id="logo"><img src="assets/imgs/KCILogo_260x65.png"></a>
+		<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		</button> -->
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item d-none d-md-block active">
+		        <a class="nav-link" id="nav-home">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		      <!-- <li class="nav-item dropdown d-none d-md-block">
+			        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Start Here
+			        </a>
+			        <div class="dropdown-menu start-here" aria-labelledby="navbarDropdown">
+			          <h5 class="dropdown-header">Need a website?</h5>
+			          <a class="dropdown-item" id="topnav-premium">I want everything done for me and I don't even want to think about it.</a>
+			          <a class="dropdown-item" id="topnav-value">I need a website built for me that will fit in my budget.</a>
+			          <a class="dropdown-item" id="topnav-diy">I want the cheapest possible option and I'm willing to do it myself.</a>
+			          <h5 class="dropdown-header">Already have a website?</h5>
+			          <a class="dropdown-item" id="topnav-diy">My website needs some serious work done.</a>
+			          <a class="dropdown-item" id="topnav-addons">I'm looking to add a new feature/functionality to my website</a>
+			          <a class="dropdown-item" id="topnav-general">I have a few very specific things I need done.</a>
+			          <h5 class="dropdown-header">Need some help?</h5>
+			          <a class="dropdown-item" id="topnav-guru">I really need some tech help and I don't know who to call.</a>
+			          <a class="dropdown-item" id="topnav-addons">I want to add/change something on my site and I don't know where to start.</a>
+			          <h5 class="dropdown-header">Have a specific job?</h5>
+			          <a class="dropdown-item" id="topnav-general">I know exactly what I want, what do you charge?</a>
+			          <h5 class="dropdown-header">Ready to start right now?</h5>
+					  <a class="dropdown-item" id="topnav-general">Hells yes! how can I get started today?</a>
+			          <h5 class="dropdown-header">Don't see what you're looking for?</h5>
+			          <a class="dropdown-item" id="topnav-general">Send me a message.</a>
+			        </div>
+			      </li> -->
+		       <li class="nav-item dropdown d-none d-md-block">
+			        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Services
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" id="topnav-premium">Premium Services</a>
+			          <a class="dropdown-item" id="topnav-value">Value Packages</a>
+			          <a class="dropdown-item" id="topnav-diy">DIY Package</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" id="topnav-guru">Go To Guru Membership</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" id="topnav-addons">Awesome Add Ons</a>
+			          <a class="dropdown-item" id="topnav-general">General Services</a>
+			        </div>
+			      </li>
+		      <li class="nav-item d-none d-md-block">
+		        <a class="nav-link" id="nav-portfolio">Portfolio</a>
+		      </li>
+		      <!-- <li class="nav-item">
+		        <a class="nav-link" data-toggle="modal" data-target=".resume-modal">Resume</a>
+		      </li> -->
+		      <li class="nav-item">
+		        <a class="nav-link d-none d-md-block" data-toggle="modal" data-target="#contactModal" data-subject="Contact Me">Contact</a>
+		        <a class="nav-link d-block d-md-none" data-toggle="modal" data-target="#contactModal" data-subject="Contact Me">Contact Me</a>
+		      </li>
+		      
+		    </ul>
+		  </div>
+    </nav>
+
+<!-- ./ NAVBAR -->
+
+
+<!--======================================= #TOP =======================================-->
+    <div id="top"></div>
+    <main role="main">
+
+
+<!-- ****************************************
+	START PORTFOLIO CONTENT
+	=======================================
+	*****************************************-->
+
+
+<div class="portfolio collapse multi-collapse" id="collapsePortfolio"> 
+
+
+	<div class="two-tone-gray top-margin py-5">
+
+		<div class="row justify-content-center mx-0">
+			<div class="col-sm-12 col-md-10 col-lg-9 col-xl-8 port-intro">
+
+				<!-- FORM TOP -->
+						<div class="row no-gutters">
+							<div class="col-sm-5 col-md-4 align-items-center">
+								<img src="assets/imgs/portrait.jpg" class="img-fluid rounded-circle" id="portrait" alt="">
+							</div>
+							<div class="col-sm-7 col-md-8 pt-5 px-4">
+								<h1>Hi there!</h1>
+								<p>Over the past <span id="extime"></span> years I've developed over 500 pages and activites for web and mobile devices.  Below is a small sampling of my work.  I&nbsp;appreciate you taking the time to take a look.</p>
+								<p>For more information on my experience, <a class="link-behavior" data-toggle="modal" data-target=".resume-modal">click here to view my resume</a>.
+								<p class="text-right px-4">I look forward to working with you!</p>
+								<p class="text-right px-4 mb-4" id="signature">- Kimberly</p>
+							</div>
+						</div> <!-- ./row no-gutters-->
+				
+			</div> <!-- ./col -->
+		</div> <!-- ./row justify-content-center -->
+
+
+
+	</div> <!-- ./ two-tone-gray -->
+
+
+
+	<!-- INLINE EMAIL FORM -->
+	
+		<div class="row justify-content-center mx-0">
+			<div class="col-sm-12 col-md-10 col-lg-9 col-xl-7">
+
+				<div class="row">
+					<div class="col-12 form2 text-center pt-5">
+						<p>Let me help you get started!</p>
+						
+					</div> <!-- ./col-12 form-top -->
+					
+					<!-- FORM BOTTOM -->
+					<div class="col-12 pt-0 pb-4">
+						<form id="inline-form-portfolio" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">
+				          <input type="hidden" name="recipient" value="kimberly@kimberlycooper.me" /> 
+				          <input type="hidden" name="subject" value="KC Consulting::Email Request" /> 
+				         <!--  <input type="hidden" name="redirect" value="" /> 
+				          <input type="hidden" name="missing_fields_redirect" value="http://www.kimberlycooper.me/contact/error.html" />  -->
+				          <input type="hidden" name="required" value="name,email,subject" /> 
+
+				          <div class="row no-gutters px-1 mt-2">
+				          	<div class="col-12 col-md-4">
+					          <div class="input-group mb-1">
+								<span class="input-group-addon tall" id="prepend-name"><i class="fa fa-user-circle-o fa-2" aria-hidden="true"></i></span>
+							  	<input type="text" class="form-control border-gray tall" name="name" placeholder="Your name" aria-describedby="prepend-name" required>
+							  </div> <!-- ./input-group -->
+							</div>
+							<div class="col-12 col-md-4">
+								<div class="input-group mb-1">
+								  <span class="input-group-addon tall" id="prepend-email"><i class="fa fa-at fa-2" aria-hidden="true"></i></span>
+								  <input type="email" class="form-control border-gray tall" name="email" placeholder="Your email" aria-describedby="prepend-email" required>
+								  <div class="invalid-feedback">
+					          		Please provide a valid email address.
+					        	  </div>
+								</div><!-- ./input-group -->
+							</div>
+								<div class="col-12 col-md-4">
+						        <button class="btn btn-outline-danger btn-lg btn-block email-form-button">Submit</button>
+						        </div>
+					        </div> <!-- ./row -->
+				        </form>
+					</div> <!-- ./col-12 form-bottom -->
+					
+					<div class="col-12 pb-4 d-none" id="success-portfolio">
+			        	<div class="alert alert-success" role="alert">
+						  <p>Thank you, you will receive a response soon!</p>
+						</div> <!-- ./alert -->
+					</div> <!-- ./ success-portfolio -->
+
+					<div class="col-12 pb-4 d-none" id="error-portfolio">
+			        	<div class="alert alert-danger" role="alert">
+						  <p class="my-1">I'm sorry, an error has occurred. &nbsp;Please contact Kimberly directly at: kimberly@kimberlycooper.me</p>
+						  <p class="m-0" id="err-port-txt"></p>
+						</div> <!-- ./alert -->
+					</div> <!-- ./ error-portfolio -->
+					
+				</div> <!-- ./row align-items-center -->
+				
+			</div> <!-- ./col -->
+		</div> <!-- ./row justify-content-center -->
+	
+
+
+  <!-- WORDPRESS PORTFOLIO -->
+
+  <div class="container">
+	<div class="card">
+	  <h4 class="card-header">
+	    Solopreneur & e-Courses
+	  </h4>
+
+	  <div class="card-body bg-light">
+	       
+	    <div class="row portfolio justify-content-center album">
+
+	      <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/JLcoaching.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">Jaime Lyerly Coaching</h5>
+	              <p class="card-text">Coaching Solopreneur Website displaying services, talents, and vital information.</p>
+	            <p class="text-center font-weight-light"><a id="pCollapse-WP1" data-toggle="collapse" href="#collapseWP1" role="button" aria-expanded="false" aria-controls="collapseWP1">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseWP1">
+		            <ul class="list-group list-group-flush">
+		              <label class="list-group-item">Features</label>
+		              <li class="list-group-item">Online Store, Sales Page, Intake Form, Scheduling, Newsletter</li>
+		              <label class="list-group-item">Programming</label>
+		              <li class="list-group-item">JavaScript, jQuery, CSS</li>
+		              <label class="list-group-item">Development Environments</label>
+		              <li class="list-group-item">Wordpress, Photoshop</li>
+		              <label class="list-group-item">Designed Using</label>
+		              <li class="list-group-item">Divi Theme</li>
+		              <label class="list-group-item">Web App Integration</label>
+		              <li class="list-group-item">Acuity, ConvertKit, JotForm, MemberPress, WooCommerce</li>
+		              <label class="list-group-item">Analytics & Social Media</label>
+		              <li class="list-group-item">Google Analytics, Facebook Pixel</li>
+		            </ul>
+	        	</div> <!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="http://jaimelyerlycoaching.com" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+
+	        <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/JLcourses.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">Jaime Lyerly Courses</h5>
+	              <p class="card-text">Coaching website for eCourses, subscriptions, membership, and other content for purchase.</p>
+	              <p class="text-center font-weight-light"><a id="pCollapse-WP2" data-toggle="collapse" href="#collapseWP2" role="button" aria-expanded="false" aria-controls="collapseWP2">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseWP2">
+		            <ul class="list-group list-group-flush">
+		              <label class="list-group-item">Features</label>
+		              <li class="list-group-item">e-Course, Protected Content</li>
+		              <label class="list-group-item">Programming</label>
+		              <li class="list-group-item">JavaScript, jQuery, CSS</li>
+		              <label class="list-group-item">Development Environments</label>
+		              <li class="list-group-item">Wordpress, Photoshop, Canva</li>
+		              <label class="list-group-item">Designed Using</label>
+		              <li class="list-group-item">Divi Theme</li>
+		              <label class="list-group-item">eCourse Platform</label>
+		              <li class="list-group-item">MemberPress</li>
+		              <label class="list-group-item">Web App Integration</label>
+		              <li class="list-group-item">ConvertKit, WooCommerce</li>
+		              <label class="list-group-item">Analytics & Social Media</label>
+		              <li class="list-group-item">Google Analytics, Facebook Pixel</li>
+		            </ul>
+		        </div>	<!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="https://courses.jaimelyerlycoaching.com/" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+
+	         <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/SGBS.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">Soul Gift Business School</h5>
+	              <p class="card-text">ECourse videos, downloads, additional media, progress monitoring, and tracking.</p>
+	            <p class="text-center font-weight-light"><a id="pCollapse-WP3" data-toggle="collapse" href="#collapseWP3" role="button" aria-expanded="false" aria-controls="collapseWP3">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseWP3">
+		            <ul class="list-group list-group-flush">
+		              <label class="list-group-item">Features</label>
+		              <li class="list-group-item">e-Course, Progress Monitoring, CRM Tracking</li>
+		              <label class="list-group-item">Programming</label>
+		              <li class="list-group-item">JavaScript, jQuery, CSS</li>
+		              <label class="list-group-item">Development Environments</label>
+		              <li class="list-group-item">Wordpress, Photoshop, Canva</li>
+		              <label class="list-group-item">Designed Using</label>
+		              <li class="list-group-item">Divi Theme</li>
+		              <label class="list-group-item">eCourse Platform</label>
+		              <li class="list-group-item">ZippyCourses, ProgressAlly</li>
+		              <label class="list-group-item">Web App Integration</label>
+		              <li class="list-group-item">ConvertKit, Ontraport</li>
+		              
+		            </ul>
+		          </div> <!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="http://courses.soulgiftnetwork.com/" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+	    </div> <!-- ./row -->
+	  </div> <!-- ./ card-body bg-light -->
+	</div> <!-- ./card -->
+
+	<hr>
+
+	<!-- WEB APP PORTFOLIO -->
+
+	<div class="card">
+	  <h4 class="card-header">
+	    Web Apps
+	  </h4>
+
+	  <div class="card-body bg-light">
+	       
+	    <div class="row portfolio album ">
+
+	       <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/yelpcamp.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">YelpCamp</h5>
+	              <p class="card-text">Dummy Yelp app allows authenticated users to post campsites with images, comments, and Google Map location.</p>
+	            <p class="text-center font-weight-light"><a id="pCollapse-WA1" data-toggle="collapse" href="#collapseWA1" role="button" aria-expanded="false" aria-controls="collapseWA1">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseWA1">
+		            <ul class="list-group list-group-flush">
+		              <label class="list-group-item">Features</label>
+		              <li class="list-group-item">Authentication, Search, Google Map, Mobile Ready, Alerts, User Posts, User Comments</li>
+		              <label class="list-group-item">Programming</label>
+		              <li class="list-group-item">NodeJS, JavaScript, jQuery, NoSQL, CSS, HTML5</li>
+		              <label class="list-group-item">Development Methods</label>
+		              <li class="list-group-item">RESTful Routing, Mobile Responsive Design</li>
+		              <label class="list-group-item">Front/Back End Technologies</label>
+	              	  <li class="list-group-item">Bootstrap, Google APIs, MongoDB, MongoLab</li>
+	              	  <label class="list-group-item">Development Environment</label>
+		              <li class="list-group-item">Cloud9</li>
+		              <label class="list-group-item">Version Control</label>
+		              <li class="list-group-item">GitHub</li>
+		              <label class="list-group-item">Deployment</label>
+		              <li class="list-group-item">Git, Heroku</li>
+		            </ul>
+	        	</div> <!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="https://intense-wildwood-45161.herokuapp.com" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+
+	        <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/blog.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">The Blog</h5>
+	              <p class="card-text">Dummy Blog app allows anyone to create a blog post with image in a mobile responsive environment.</p>
+	            <p class="text-center font-weight-light"><a id="pCollapse-WA2" data-toggle="collapse" href="#collapseWA2" role="button" aria-expanded="false" aria-controls="collapseWA2">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseWA2">
+		            <ul class="list-group list-group-flush">
+		               <label class="list-group-item">Features</label>
+		                <li class="list-group-item">User Posts, Date/Time Stamping, Mobile Ready</li>
+		                <label class="list-group-item">Programming</label>
+			            <li class="list-group-item">NodeJS, JavaScript, NoSQL, CSS, HTML5</li>
+			            <label class="list-group-item">Development Methods</label>
+			            <li class="list-group-item">RESTful Routing, Mobile Responsive Design</li>
+			            <label class="list-group-item">Front/Back End Technologies</label>
+		              	<li class="list-group-item">Semantic-UI, MongoDB, MongoLab</li>
+		              	<label class="list-group-item">Development Environment</label>
+			            <li class="list-group-item">Cloud9</li>
+			            <label class="list-group-item">Version Control</label>
+			            <li class="list-group-item">GitHub</li>
+			            <label class="list-group-item">Deployment</label>
+			            <li class="list-group-item">Git, Heroku</li>
+		            </ul>
+	            </div> <!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="https://damp-dawn-99668.herokuapp.com/blogs" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+	    </div> <!-- ./row -->
+	  </div> <!-- ./ card-body bg-light -->
+	</div> <!-- ./card -->
+
+
+   <hr>
+
+	<!-- FLASH PORTFOLIO -->
+
+	<div class="card">
+	  <h4 class="card-header">
+	    Interactive Games
+	  </h4>
+
+	  <div class="card-body bg-light">
+	       
+	    <div class="row portfolio justify-content-center album">
+
+	      <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/balloons.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">Count Balloons By 2</h5>
+	              <p class="card-text">Help Backpack Bear count to 20 by pairing balloons and skip counting by 2.</p>
+	            <p class="text-center font-weight-light"><a id="pCollapse-FL1" data-toggle="collapse" href="#collapseFL1" role="button" aria-expanded="false" aria-controls="collapseFL1">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseFL1">
+		            <ul class="list-group list-group-flush">
+		              <label class="list-group-item">Features</label>
+		              <li class="list-group-item">Animation, Fully Interactive, Season Specific Content, Sound Design, UX, Game Logic, Accessibility</li>
+		              <label class="list-group-item">Languages</label>
+		              <li class="list-group-item">ActionScript, XML, CSS, HTML5</li>
+		              <label class="list-group-item">Development Environments</label>
+		              <li class="list-group-item">Adobe Animate, Photoshop, Audacity</li>
+		              <label class="list-group-item">Version Control</label>
+		              <li class="list-group-item">Perforce</li>
+		              <label class="list-group-item">Deployed To</label>
+		              <li class="list-group-item">Web, AIR, IOS, AOS</li>
+		            </ul>
+	       		</div> <!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="http://more2.starfall.com/m/math/balloon-count/load.htm?d=demo&" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+
+	        <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/coinmonkey.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">Coin Monkey</h5>
+	              <p class="card-text">Help Coin Monkey by collecting all the coins in this Super Mario Bros-esque type game.</p>
+	           	  <p class="text-center font-weight-light"><a id="pCollapse-FL2" data-toggle="collapse" href="#collapseFL2" role="button" aria-expanded="false" aria-controls="collapseFL2">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseFL2">
+		            <ul class="list-group list-group-flush">
+		              <label class="list-group-item">Features</label>
+		              <li class="list-group-item">Animation, Fully Interactive, Season Specific Content, Sound Design, UX, Game Logic, Accessibility</li>
+		              <label class="list-group-item">Languages</label>
+		              <li class="list-group-item">ActionScript, XML, CSS, HTML5</li>
+		              <label class="list-group-item">Development Environment</label>
+		              <li class="list-group-item">Adobe Animate, Audacity</li>
+		              <label class="list-group-item">Version Control</label>
+		              <li class="list-group-item">Perforce</li>
+		              <label class="list-group-item">Deployed To</label>
+		              <li class="list-group-item">Web, AIR, IOS, AOS</li>
+		            </ul>
+	        	</div> <!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="http://more2.starfall.com/m/math/coin-monkey/load.htm?d=demo&" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+
+	         <div class="col-lg-4 col-md-6">
+		        <div class="card">
+		          <img class="card-img-top" src="assets/imgs/thumbs/valentine.jpg" alt="Card image cap">
+		            <div class="card-body">
+		              <h5 class="card-title">Send a Valentine</h5>
+		              <p class="card-text">Pick a card, customize a message, choose a recipient. Watch the Valentine magic!</p>
+		           <p class="text-center font-weight-light"><a id="pCollapse-FL3" data-toggle="collapse" href="#collapseFL3" role="button" aria-expanded="false" aria-controls="collapseFL3">▼ View more details about this website</a></p>
+		            </div> <!-- ./card-body -->
+		            <div class="collapse" id="collapseFL3">
+			            <ul class="list-group list-group-flush">
+			              <label class="list-group-item">Features</label>
+			              <li class="list-group-item">User Directed Content, UX, Sound Design, Game Logic</li>
+			              <label class="list-group-item">Languages</label>
+			              <li class="list-group-item">ActionScript, XML, CSS, HTML5</li>
+			              <label class="list-group-item">Development Environment</label>
+			              <li class="list-group-item">Adobe Animate, Audacity</li>
+			              <label class="list-group-item">Version Control</label>
+			              <li class="list-group-item">Perforce</li>
+			              <label class="list-group-item">Deployed To</label>
+			              <li class="list-group-item">Web, AIR, IOS, AOS</li>
+			            </ul>
+		        	</div> <!-- ./ COLLAPSE -->
+	            	<div class="card-footer px-0 py-0">
+		              <a href="http://more2.starfall.com/m/holiday/valentine-card/load.htm?f&ref=main" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+		            </div>  <!-- ./card-footer -->   
+	          	</div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+	         <div class="col-lg-4 col-md-6">
+		        <div class="card">
+		          <img class="card-img-top" src="assets/imgs/thumbs/TL2engines.jpg" alt="Card image cap">
+		            <div class="card-body">
+		              <h5 class="card-title">Two Little Engines</h5>
+		              <p class="card-text">A modern retelling of the "Little Engine that Could" showing what we can accomplish with a little help from our friends.</p>
+		           <p class="text-center font-weight-light"><a id="pCollapse-FL4" data-toggle="collapse" href="#collapseFL4" role="button" aria-expanded="false" aria-controls="collapseFL4">▼ View more details about this website</a></p>
+		            </div> <!-- ./card-body -->
+		            <div class="collapse" id="collapseFL4">
+			            <ul class="list-group list-group-flush">
+			              <label class="list-group-item">Features</label>
+			              <li class="list-group-item">Dynamically Generated Text, "Smart" Audio Syncing</li>
+			              <label class="list-group-item">Languages</label>
+			              <li class="list-group-item">ActionScript, XML, CSS, HTML5</li>
+			              <label class="list-group-item">Development Environment</label>
+			              <li class="list-group-item">Adobe Animate, Audacity</li>
+			              <label class="list-group-item">Special Development Methods</label>
+			              <li class="list-group-item">Auto-XML Generation, UI Stage Detection</li>
+			              <label class="list-group-item">Version Control</label>
+			              <li class="list-group-item">Perforce</li>
+			              <label class="list-group-item">Deployed To</label>
+			              <li class="list-group-item">Web, AIR, IOS, AOS</li>
+			            </ul>
+		        	</div> <!-- ./ COLLAPSE -->
+	            	<div class="card-footer px-0 py-0">
+		              <a href="http://more2.starfall.com/m/talking-library/talking-library-book/load.htm?book=TwoEngines&d=demo&" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+		            </div>  <!-- ./card-footer -->   
+	          	</div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+	         <div class="col-lg-4 col-md-6">
+		        <div class="card">
+		          <img class="card-img-top" src="assets/imgs/thumbs/shortA.jpg" alt="Card image cap">
+		            <div class="card-body">
+		              <h5 class="card-title">Short A Word Machine</h5>
+		              <p class="card-text">Pull the levers, push the buttons, watch the letters change to make new words and watch those words come to life.</p>
+		           <p class="text-center font-weight-light"><a id="pCollapse-FL5" data-toggle="collapse" href="#collapseFL5" role="button" aria-expanded="false" aria-controls="collapseFL5">▼ View more details about this website</a></p>
+		            </div> <!-- ./card-body -->
+		            <div class="collapse" id="collapseFL5">
+			            <ul class="list-group list-group-flush">
+			              <label class="list-group-item">Features</label>
+			              <li class="list-group-item">Original Concept, Animation, Sound Design, Game Logic</li>
+			              <label class="list-group-item">Languages</label>
+			              <li class="list-group-item">ActionScript, XML, CSS, HTML5</li>
+			              <label class="list-group-item">Development Environment</label>
+			              <li class="list-group-item">Adobe Animate, Audacity</li>
+			              <label class="list-group-item">Version Control</label>
+			              <li class="list-group-item">Perforce</li>
+			              <label class="list-group-item">Deployed To</label>
+			              <li class="list-group-item">Web, AIR, IOS, AOS</li>
+			            </ul>
+		        	</div> <!-- ./ COLLAPSE -->
+	            	<div class="card-footer px-0 py-0">
+		              <a href="http://more2.starfall.com/m/word-machines/short-a/load.htm?d=demo&n=main&y=1&" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+		            </div>  <!-- ./card-footer -->   
+	          	</div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+
+	    </div> <!-- ./row -->
+	  </div> <!-- ./ card-body bg-light -->
+	</div> <!-- ./card -->
+
+	<hr>
+
+	<!-- JAVASCRIPT PORTFOLIO -->
+
+	<div class="card">
+	  <h4 class="card-header">
+	    Fun Interactives
+	  </h4>
+
+	  <div class="card-body bg-light">
+	       
+	    <div class="row portfolio album ">
+
+	       <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/colorgame.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">Guess the RGB</h5>
+	              <p class="card-text">A game for design nerds like me.  Randomly generates an RGB code and 6 squares that could represent the color code.  Guess which square matches the RGB code.</p>
+	            <p class="text-center font-weight-light"><a id="pCollapse-JS1" data-toggle="collapse" href="#collapseJS1" role="button" aria-expanded="false" aria-controls="collapseJS1">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseJS1">
+		            <ul class="list-group list-group-flush">
+		              <label class="list-group-item">Features</label>
+		              <li class="list-group-item">Animation, UI/UX, Game Logic</li>
+		              <label class="list-group-item">Programming</label>
+		              <li class="list-group-item">JavaScript, CSS, HTML5</li>
+		              <label class="list-group-item">Development Methods</label>
+		              <li class="list-group-item">Mobile Responsive Design</li>
+		              <label class="list-group-item">Front End Technologies</label>
+	              	  <li class="list-group-item">Bootstrap</li>
+	              	  <label class="list-group-item">Development Environment</label>
+		              <li class="list-group-item">Sublime</li>
+		            </ul>
+	        	</div> <!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="fun/colorgame.html" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+
+	        <div class="col-lg-4 col-md-6">
+	        <div class="card">
+	          <img class="card-img-top" src="assets/imgs/thumbs/papershape.jpg" alt="Card image cap">
+	            <div class="card-body">
+	              <h5 class="card-title">PaperShape</h5>
+	              <p class="card-text">Modelled after Pat-a-tap.  Having fun with shapes and sounds. Press Any Key to see random shape/color/sound animate.</p>
+	            <p class="text-center font-weight-light"><a id="pCollapse-JS2" data-toggle="collapse" href="#collapseJS2" role="button" aria-expanded="false" aria-controls="collapseJS2">▼ View more details about this website</a></p>
+	            </div> <!-- ./card-body -->
+	            <div class="collapse" id="collapseJS2">
+		            <ul class="list-group list-group-flush">
+		               <label class="list-group-item">Features</label>
+		                <li class="list-group-item">Animation, Sound, UI</li>
+		                <label class="list-group-item">Programming</label>
+			            <li class="list-group-item">Javascript, CSS, HTML5</li>
+			            <label class="list-group-item">Front End Frameworks</label>
+		              	<li class="list-group-item">Paper.js, Howler.js</li>
+		              	<label class="list-group-item">Development Environment</label>
+			            <li class="list-group-item">Sublime</li>
+		            </ul>
+	            </div> <!-- ./ COLLAPSE -->
+	            <div class="card-footer px-0 py-0">
+	              <a href="fun/papershape.html" target="_blank" class="btn btn-danger btn-block py-3">View In New Window <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	            </div>  <!-- ./card-footer -->   
+	          </div>  <!-- ./ card -->      
+	        </div> <!-- ./col-md-4 -->
+
+	    </div> <!-- ./row -->
+	  </div> <!-- ./ card-body bg-light -->
+	</div> <!-- ./card -->
+
+
+   <hr>
+
+
+
+  </div> <!-- ./ CONTAINER -->
+</div> <!-- ./ PORTFOLIO COLLAPSE --> 
+
+
+<!-- ****************************************
+	START MAIN CONTENT
+	=======================================
+	*****************************************-->
+
+<div class="collapse multi-collapse show" id="collapseMain">
+
+
+	<!-- CAROUSEL 
+	=======================================-->
+
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+		  </ol>
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img class="d-block w-100 d-none d-md-block" src="assets/imgs/carousel-wood_1.jpg" alt="First slide">
+		      <img class="d-block w-100 d-md-none" src="assets/imgs/carousel-wood_1sm.jpg" alt="First slide">
+		      <div class="carousel-caption">
+			    <div class="c1-title">Welcome!</div>
+			    <div class="c1-embossed">to<br><span class="c1-biz-name ltr-spc-md">Kimberly Cooper</span><br><span class="c1-biz-subtitle ltr-spc-lg">consulting</span></div>
+			    <div class="c1-tagline">Your tech just got easier!</div>
+			    <p class="mb-0">
+			    	<a class="btn btn-lg btn-danger text-white mb-1 mt-4" id="carnav-premium" view-tgt="#view-area" role="button">Get Started Now!</a>
+			    </p>
+			  </div><!-- ./carousel-caption -->
+		    </div> <!-- ./carousel-item -->
+		     <div class="carousel-item">
+		      <img class="d-block w-100 d-none d-md-block" src="assets/imgs/carousel-pots_2.jpg" alt="Second slide">
+		      <img class="d-block w-100 d-md-none" src="assets/imgs/carousel-pots_2sm.jpg" alt="Second slide">
+		      <div class="carousel-caption">
+		      	<!-- <div class="super">best value package!</div> -->
+			    <h1>Solopreneur Sta<span class="ltr-spc-md">rt</span>er</h1>
+			    <p>Perfect for anyone needing a simple website!</p>
+			    <a id="carnav-value" view-tgt="#view-solopreneur" class="btn btn-danger btn-lg">Check it out!</a>
+			  </div><!-- ./carousel-caption -->
+		    </div><!-- ./carousel-item -->
+		    <div class="carousel-item">
+		      <img class="d-block w-100 d-none d-md-block" src="assets/imgs/carousel-ecommerce_3.jpg" alt="Third slide">
+		      <img class="d-block w-100 d-md-none" src="assets/imgs/carousel-ecommerce_3sm.jpg" alt="Third slide">
+		      <div class="carousel-caption">
+		      	<!-- <div class="super">value package!</div> -->
+			    <h1>eCommerce <nobr>Sta<span class="ltr-spc-md">rt</span>-up</nobr></h1>
+			    <p>Get your online business up and running!</p>
+			    <a id="carnav-value" view-tgt="#view-ecommerce" class="btn btn-danger btn-lg">Take me there!</a>
+			  </div> <!-- ./carousel-caption -->
+		    </div><!-- ./carousel-item -->
+		    <div class="carousel-item" id="carousel-4">
+		      <img class="d-block w-100 d-none d-md-block" src="assets/imgs/carousel-spotlights_4.jpg" alt="Fourth slide">
+		      <img class="d-block w-100 d-md-none" src="assets/imgs/carousel-spotlights_4sm.jpg" alt="Fourth slide">
+		      <div class="carousel-caption">
+			    <!-- <div class="super">premium service!</div> -->
+				  <h1>Web Presence Package</h1>
+				  <!-- <div class="sub">design · development · branding · features</div> -->
+			    <p>Everything you need to build a brand and establish <br>a strong presence on the web.</p>
+			    <a id="carnav-premium" view-tgt="#view-presence" class="btn btn-danger btn-lg">Find out more!</a>
+			    
+			  </div><!-- ./carousel-caption -->
+		    </div> <!-- ./carousel-item -->
+		    <div class="carousel-item">
+		      <img class="d-block w-100 d-none d-md-block" src="assets/imgs/carousel-confetti_5.jpg" alt="Fifth slide">
+		      <img class="d-block w-100 d-md-none" src="assets/imgs/carousel-confetti_5sm.jpg" alt="Fifth slide">
+		      <div class="carousel-caption">
+			    <!-- <div class="super">premium service!</div> -->
+				  <h1>Website Upgrade</h1>
+				  <p class="mb-0 mt-3" style="font-size: 2rem;">Does your site need</p>
+				  <div class="rotate-text">
+					  <!-- <div class="rotate">Does your site need a new </div> -->
+					  <div class="rotate">a new </div>
+					  <div class="rotate">
+					    <span class="word">design?</span>
+					    <span class="word">navigation?</span>
+					    <span class="word">look?</span>
+					    <span class="word">feel?</span>
+					    <span class="word">function?</span>
+					  </div>
+					</div>
+					<p>&nbsp;</p>
+			    <a id="carnav-premium" view-tgt="#view-upgrade" class="btn btn-danger btn-lg">Get more info!</a>
+			  </div> <!-- ./carousel-caption -->
+		    </div><!-- ./carousel-item -->
+		    <div class="carousel-item">
+		      <img class="d-block w-100 d-none d-md-block" src="assets/imgs/carousel-question_6.jpg" alt="Sixth slide">
+		      <img class="d-block w-100 d-md-none" src="assets/imgs/carousel-question_6sm.jpg" alt="Sixth slide">
+		      <div class="carousel-caption">
+			    <h1 class="c6-blackboard">Not sure<br>where to start?</h1>
+			    <button type="button" class="glow-button  d-none d-md-inline-block" data-toggle="modal" data-target=".scheduler-modal">Click HERE to schedule a free consultation <i class="fa fa-mouse-pointer fa-1" aria-hidden="true"></i></button>
+			    <a class="d-md-none" href="https://kimberlycooperconsulting.as.me/consultation" target="_blank">
+			    <button type="button" class="glow-button" >Click HERE to schedule a free consultation <i class="fa fa-mouse-pointer fa-1" aria-hidden="true"></i></button></a>
+			  </div><!-- ./carousel-caption -->
+		    </div> <!-- ./carousel-item -->
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+	</div> 
+
+		<!-- /.CAROUSEL -->
+
+
+	<!-- INLINE EMAIL FORM 
+	=======================================-->
+	<div class="two-tone-orange py-5">
+
+		<div class="row justify-content-center mx-0">
+			<div class="col-sm-12 col-md-8 col-lg-7 col-xl-6 email-form">
+
+				<div class="row align-items-center">
+					<div class="col-12 form-top">
+
+						<!-- FORM TOP -->
+						<div class="row no-gutters" id="sm-form">
+							<div class="col-3 col-sm-3 text-center">
+								<i class="fa fa-envelope-square" aria-hidden="true"></i>
+							</div>
+							<div class="col-9 col-sm-9 pt-5">
+								<h1>Not sure where to begin?</h1>
+								<p>Let me help you get started!</p>
+							</div>
+						</div> <!-- ./row no-gutters-->
+						
+					</div> <!-- ./col-12 form-top -->
+					
+					<!-- FORM BOTTOM -->
+					<div class="col-12 form-bottom py-4">
+						<form id="inline-form-main" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">
+				          <input type="hidden" name="recipient" value="kimberly@kimberlycooper.me" /> 
+				          <input type="hidden" name="subject" value="KC Consulting::Email Request" /> 
+				          <!-- <input type="hidden" name="redirect" value="http://www.kimberlycooper.me/contact/thankyou.html" /> 
+				          <input type="hidden" name="missing_fields_redirect" value="http://www.kimberlycooper.me/contact/error.html" />  -->
+				          <input type="hidden" name="required" value="name,email,subject" /> 
+
+				          <div class="row no-gutters px-1 mt-2">
+				          	<div class="col-12 col-md-4">
+				          <div class="input-group mb-1">
+							  <span class="input-group-addon tall" id="prepend-name"><i class="fa fa-user-circle-o fa-2" aria-hidden="true"></i></span>
+							  <input type="text" class="form-control tall" name="name" placeholder="Your name" aria-describedby="prepend-name" required>
+							</div> <!-- ./input-group -->
+							</div>
+							<div class="col-12 col-md-4">
+							<div class="input-group mb-1">
+							  <span class="input-group-addon tall" id="prepend-email"><i class="fa fa-at fa-2" aria-hidden="true"></i></span>
+							  <input type="email" class="form-control tall" name="email" placeholder="Your email" aria-describedby="prepend-email" required>
+							  <div class="invalid-feedback">
+				          		Please provide a valid email address.
+				        		</div>
+							</div><!-- ./input-group -->
+							</div>
+							<div class="col-xs-12 col-md-4">
+					        <button class="btn btn-outline-danger btn-lg btn-block email-form-button">Submit</button>
+					        </div>
+					        </div> <!-- ./row -->
+				        </form>
+					</div> <!-- ./col-12 form-bottom -->
+
+					<div class="col-12 p-0 d-none" id="success-main">
+			        	<div class="alert alert-success" role="alert">
+						  <p>Thank you, you will receive a response soon!</p>
+						</div> <!-- ./alert -->
+					</div> <!-- ./ success-main -->
+
+					<div class="col-12 pb-4 d-none" id="error-main">
+			        	<div class="alert alert-danger" role="alert">
+						  <p class="my-1">I'm sorry, an error has occurred. &nbsp;Please contact Kimberly directly at: kimberly@kimberlycooper.me</p>
+						  <p class="m-0" id="err-main-txt"></p>
+						</div> <!-- ./alert -->
+					</div> <!-- ./ error-main -->
+					
+				</div> <!-- ./row align-items-center -->
+				
+			</div> <!-- ./col -->
+		</div> <!-- ./row justify-content-center -->
+
+	</div> <!-- ./two-tone-bg -->
+	 
+	 <!-- ./ INLINE EMAIL FORM -->
+
+
+	<div id="view-area"></div>
+
+	<!-- TOP MENU 
+	=======================================-->
+
+	<ul class="nav nav-pills justify-content-center top-menu my-3" id="top-menu" role="tablist">
+	  <li class="nav-item">
+	    <a class="nav-link active" id="pills-premium-tab" href="#pills-premium" role="tab" aria-controls="pills-premium" aria-selected="true" data-toggle="pill"><i class="fa fa-diamond fa-1" aria-hidden="true"></i> Premium Packages</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="pills-value-tab" href="#pills-value" role="tab" aria-controls="pills-value" aria-selected="false" data-toggle="pill">
+		    	<i class="fa fa-star-o fa-1" aria-hidden="true"></i> Value Packages</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="pills-diy-tab" data-toggle="pill" href="#pills-diy" role="tab" aria-controls="pills-diy" aria-selected="false">
+	    	<i class="fa fa-heart-o fa-1" aria-hidden="true"></i> DIY Package</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="pills-guru-tab" data-toggle="pill" href="#pills-guru" role="tab" aria-controls="pills-guru" aria-selected="false"><i class="fa fa-life-ring fa-1" aria-hidden="true"></i> Go To Guru</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="pills-addons-tab" data-toggle="pill" href="#pills-addons" role="tab" aria-controls="pills-addons" aria-selected="false"><i class="fa fa-plus fa-1" aria-hidden="true"></i> Awesome Add Ons</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="pills-general-tab" data-toggle="pill" href="#pills-general" role="tab" aria-controls="pills-general" aria-selected="false"><i class="fa fa-question-circle-o fa-1" aria-hidden="true"></i> General Services</a>
+	  </li>
+	</ul>
+
+
+	<!-- ./ TOP MENU -->
+
+
+
+
+	<!--======================================= #PREMIUM-SERVICES =======================================-->
+
+	<div id="premium-services"></div>
+
+	<div class="tab-content" id="pills-tabContent">
+	  <div class="tab-pane fade show active" id="pills-premium" role="tabpanel" aria-labelledby="pills-premium-tab">
+
+
+
+	<!--  PREMIUM PACKAGES 
+	=======================================-->
+
+	<section class="jumbotron jumbotron-fluid text-center py-4">
+	  	<div class="container">
+	      <h1 class="jumbotron-heading pt-3">Premium Packages</h1>
+	      <p class="lead text-muted blend pb-3">Everything you need for an exquisite online presence. <!-- &nbsp;<a class="link-behavior font-weight-light small" data-toggle="collapse" href="#collapsePremiumDesc" aria-expanded="false" aria-controls="collapsePremiumDesc">Read more...</a> --></p>
+	      
+	      <!-- <p class="collapse lead text-muted blend mb-4" id="collapsePremiumDesc">These packages are ideal if you're looking for an <nobr>all-inclusive</nobr> website that doesn't cost a fortune.</p> -->
+	      
+	        <!-- <button type="button" class="glow-button" data-toggle="modal" data-target=".scheduler-modal">Click HERE to schedule a free consultation <i class="fa fa-mouse-pointer fa-1" aria-hidden="true"></i></button> -->
+	         <button type="button" class="glow-button d-none d-md-inline-block" data-toggle="modal" data-target=".scheduler-modal">Click HERE to schedule a free consultation <i class="fa fa-mouse-pointer fa-1" aria-hidden="true"></i></button>
+			    <a class="d-md-none" href="https://kimberlycooperconsulting.as.me/consultation" target="_blank">
+			    <button type="button" class="glow-button" >Click HERE to schedule a free consultation <i class="fa fa-mouse-pointer fa-1" aria-hidden="true"></i></button></a>
+	      </p>
+	  	</div>
+	  </section>
+
+	<div id="view-presence"></div>
+
+	<!-- START PREMIUM PACKAGES -->
+	    <div class="container">
+
+	        <div class="row featurette my-5">
+	          <div class="col-md-7">
+	            <h2 class="featurette-heading">Premium Web Presence Package <br><span class="text-muted ltr-spc-sm">Make an <span class="underline">indelible</span> first impression.</span></h2>
+	            <p class="lead">Your website should be amazing and unique like your business is. &nbsp;Containing all the features and special touches to be a true reflection of you and your vision.  &nbsp;You need stunning design, flawless execution, and all the support you require to have control over your content going forward.</p>
+
+
+	             <div class="well">
+			      	<ul class="premium-list">
+	                      <label>Package Includes:</label>
+	                      	<li> &nbsp;Premium development methods and techniques</li>
+	                      	<li> &nbsp;Premium website design + 5 revisions</li>
+	                      	<li> &nbsp;Unlimited Pages</li>
+	                      	<li> &nbsp;Custom logo design + full branding</li>
+	                      	<li> &nbsp;Social Media</li>
+	                      	<li> &nbsp;1 Custom Sales Page</li>
+	                      	<li> &nbsp;1 Custom Facebook Landing Page</li>
+	                      	<li> &nbsp;Branded Twitter Page</li>
+	                      	<li> &nbsp;Mobile Device Compatible</li>
+	                      	<li> &nbsp;Contact Form</li>
+	                      	<li> &nbsp;<b>+ Unlimited <a class="link-behavior" tabindex="0" id="topnav-addons" redir="premium-presence">Awesome Add Ons</a></b>&nbsp;<a class="popover-dismiss d-none d-md-inline p-3" role="button" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-offset="10" title="What's an Awesome Add On?" data-content="Think of them as extra goodies you can add to your website to make it totally <i>awesome!</i><p>Click link to go to <nobr>Awesome Add Ons.</nobr></p>"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>
+	                      	<li> &nbsp;<b>+1 FREE year website hosting</b></li>
+	                      	<li> &nbsp;<b>+1 month of <a class="link-behavior" tabindex="1" id="topnav-guru" redir="premium-presence">Go-To-Guru Membership</a></b>&nbsp;<a class="popover-dismiss d-none d-md-inline p-3" role="button" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-offset="10" title="What is Go-To-Guru?" data-content="Imagine having your very own tech guru you can call anytime you have a problem with your website.  <p>Sounds pretty awesome right?</p><p>Click link for more details.</p>"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+	                      	</li>
+	                    </ul>
+			      </div> <!-- ./well -->
+			       <div class="card-footer">
+			      <p>Starting at $4000</p>
+			      <!-- <a href="contact/" class="btn btn-danger">Get Started</a> -->
+			      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Web Presence Package">Get Started</button>
+			  </div> <!-- ./card-footer -->
+	          </div>
+	          <div class="col-md-5">
+	            <img class="featurette-image img-fluid mx-auto" src="assets/imgs/custom-website-design500x500.jpg" alt="Photo by Igor Miske on Unsplash">
+	          </div>
+	        </div>
+
+	        <hr>
+
+	        <div id="view-upgrade"></div>
+
+	        <div class="row featurette my-5">
+	          <div class="col-md-7 order-md-2">
+	            <h2 class="featurette-heading">Premium Website Upgrade <br><span class="text-muted ltr-spc-sm">Find out just how <span class="double-underline">good</span> your site can look</span></h2>
+	            <p class="lead"><nobr>Does your site need a facelift?</nobr>&nbsp;  Was it once <nobr>state-of-the-art</nobr> but now its age is starting to show?&nbsp;  Does it look fantastic on your laptop and terrible on your phone?&nbsp;   Have certain features suddenly stopped working?&nbsp;  <nobr>Do you just want your site to do <i>more</i>?</nobr> </p>
+
+	            <p class="lead"><nobr>Sounds like you need an upgrade.</nobr></p>
+
+	            <div class="well">
+			      	<ul class="premium-list">
+	                      <label>Package Includes:</label>
+	                      	<li> &nbsp;Premium development methods and techniques</li>
+	                      	<li> &nbsp;Full website & Design assessment</li>
+	                      	<li> &nbsp;<i>Brand New</i> Custom Design + 2 revisions</li>
+	                      	<li> &nbsp;Custom Logo Design</li>
+	                      	<li> &nbsp;Social Media ✩</li>
+	                      	<li> &nbsp;SEO & analytics</li>
+	                      	<li> &nbsp;Integration with all your services</li>
+	                      	<li> &nbsp;<b>+ Unlimited <a class="link-behavior" tabindex="0" id="topnav-addons" redir="premium-upgrade">Awesome Add Ons</a></b>&nbsp;<a class="popover-dismiss d-none d-md-inline p-3" role="button" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-offset="10" title="What's an Awesome Add On?" data-content="Think of them as extra goodies you can add to your website to make it totally <i>awesome!</i><p>Click link to go to <nobr>Awesome Add Ons.</nobr></p>"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>
+	                      	<li> &nbsp;<b>+1 month of <a class="link-behavior" tabindex="1" id="topnav-guru" redir="premium-upgrade">Go-To-Guru Membership</a></b>&nbsp;<a class="popover-dismiss d-none d-md-inline p-3" role="button" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-offset="10" title="What is Go-To-Guru?" data-content="Imagine having your very own tech guru you can call anytime you have a problem with your website.  <p>Sounds pretty awesome right?</p><p>Click link for more details.</p>"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+	                      	</li>
+	                      
+	                    </ul>
+	                    <small>✩ Optional</small>
+			      </div> <!-- ./well -->
+			       <div class="card-footer">
+			      <p>Starting at $2000</p>
+			      <!-- <a href="contact/" class="btn btn-danger">Get Started</a> -->
+			      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Premium Upgrade Package">Get Started</button>
+			  </div> <!-- ./card-footer -->
+	          </div>
+	          <div class="col-md-5 order-md-1">
+	            <img class="featurette-image img-fluid mx-auto" src="assets/imgs/upgrade500x500.jpg" alt="Generic placeholder image">
+	          </div>
+	        </div>
+
+	        <!-- /END THE PREMIUM PACKAGES -->
+	</div> <!-- ./container -->
+
+		<!-- ./ PREMIUM PACKAGES -->
+
+	</div>
+	  <div class="tab-pane fade" id="pills-value" role="tabpanel" aria-labelledby="pills-value-tab">
+
+	<!--======================================= #VALUE-SERVICES =======================================-->
+
+	<div id="value-services"></div>
+
+	<!-- VALUE PACKAGES 
+	=======================================-->
+
+	<section class="jumbotron jumbotron-fluid text-center" >
+	        <div class="container">
+	          <h1 class="jumbotron-heading">Value Packages</h1>
+	      
+	          <p class="lead text-muted">Simple, Intuitive, Affordable. <!-- &nbsp;<a class="link-behavior font-weight-light small" data-toggle="collapse" href="#collapseValueDesc" aria-expanded="false" aria-controls="collapseValueDesc">Read more...</a> --></p>
+	          <!--  <p class="collapse lead text-muted blend mb-4" id="collapseValueDesc">These packages are ideal if you're looking for a great basic website at a great price.</p> -->
+	        </div>
+	      </section>
+
+
+	      <!-- START THE VALUE PACKAGES -->
+		
+		<div id="view-solopreneur"></div>
+
+		<!-- START VALUE PACKAGES -->
+		<div class="container">
+	        <div class="row featurette my-5">
+	          <div class="col-md-7">
+	            <h2 class="featurette-heading">Solopreneur Starter <br><span class="text-muted small ltr-spc-sm">Having a website has never been so easy.</span></h2>
+	            <p class="lead">Nowadays everyone needs a website ... especially if you own your own business.&nbsp;  You need a friendly, beautiful page that welcomes your users, and at a price you can afford.&nbsp;  <i>You've come to the right place.</i></p>
+
+				<div class="well">
+			      	<ul class="premium-list">
+	                      <label>Package Includes:</label>
+	                      <li> &nbsp;Custom Web Design + 2 revisions</li>
+	                      	<li> &nbsp;Up to 5 pages</li>
+	                      	<li> &nbsp;Contact Form</li>
+	                      	<li> &nbsp;Social Media Sharing</li>
+	                      	<li> &nbsp;Mobile Device Compatible</li>
+	                      	<li> &nbsp;SEO & analytics</li>
+	                      	<li> &nbsp;<b>+1 FREE year website hosting</b></li>
+	                      	<li> &nbsp;<b>+1 month of <a class="link-behavior" tabindex="1" id="topnav-guru" redir="value-solopreneur">Go-To-Guru Membership</a></b>&nbsp;<a class="popover-dismiss d-none d-md-inline p-3" role="button" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-offset="10" title="What is Go-To-Guru?" data-content="Imagine having your very own tech guru you can call anytime you have a problem with your website.  <p>Sounds pretty awesome right?</p><p>Click link for more details.</p>"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+	                      	</li>
+	                    </ul>
+			      </div> <!-- ./well -->
+			       <div class="card-footer">
+			     	 <p>Starting at just $999</p>
+				      	<!-- <a href="contact/" class="btn btn-danger">Get Started</a> -->
+				      	<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Solopreneur Starter">Get Started</button>
+			 		 </div> <!-- ./card-footer -->
+	          	   </div>
+	          <div class="col-md-5">
+	            <img class="featurette-image img-fluid mx-auto" src="assets/imgs/solopreneur_500x500.jpg" alt="Generic placeholder image">
+	          </div>
+	        </div>
+
+	        <hr>
+	        <div id="view-ecommerce"></div>
+
+	        <div class="row featurette my-5">
+	          <div class="col-md-7 order-md-2">
+	            <h2 class="featurette-heading">eCommerce Start-Up<br><span class="text-muted ltr-spc-sm">No limits to your online business.</span></h2>
+	            <p class="lead">You have the products ... you have the services ... now get your online store up and running!&nbsp;  Reach your customers.&nbsp;  Build your brand.&nbsp;  Become a full-fledged online business.</p>
+
+	            <div class="well">
+			      	<ul class="premium-list">
+	                      <label>Package Includes:</label>
+	                      <li> &nbsp;Custom home page with slide show</li>
+	                      <li> &nbsp;Custom website design + 2 revisions</li>
+	                      <li> &nbsp;Up to 10 product pages</li>
+	                      <li> &nbsp;Shopping Cart</li>
+	                      <li> &nbsp;Social Media Sharing</li>
+	                      <li> &nbsp;Contact Form</li>
+	                      <li> &nbsp;Mobile Device Compatible</li>
+	                      <li> &nbsp;SEO & analytics</li>
+	                  	  <li> &nbsp;<b>+1 FREE year website hosting</b></li>
+	                  	  <li> &nbsp;<b>+1 month of <a class="link-behavior" tabindex="1" id="topnav-guru" redir="value-ecommerce">Go-To-Guru Membership</a></b>&nbsp;<a class="popover-dismiss d-none d-md-inline p-3" role="button" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-offset="10" title="What is Go-To-Guru?" data-content="Imagine having your very own tech guru you can call anytime you have a problem with your website.  <p>Sounds pretty awesome right?</p><p>Click link for more details.</p>"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+	                      	</li>
+	                      	
+	                    </ul>
+			      </div> <!-- ./well -->
+			       <div class="card-footer">
+			     	 <p>Starting at just $999</p>
+				      	<!-- <a href="contact/" class="btn btn-danger">Get Started</a> -->
+				      	<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="eCommerce Start-Up">Get Started</button>
+			 		 </div> <!-- ./card-footer -->
+	          </div>
+	          <div class="col-md-5 order-md-1">
+	            <img class="featurette-image img-fluid mx-auto" src="assets/imgs/ecommerce_500x500.jpg" alt="Downloaded from Pexels">
+	          </div>
+	        </div>
+	</div> <!-- ./container -->
+
+	        <!-- ./ VALUE PACKAGES -->
+
+	</div>
+	  <div class="tab-pane fade" id="pills-diy" role="tabpanel" aria-labelledby="pills-diy-tab">
+
+	<!--======================================= #DIY-SERVICES =======================================-->
+
+	<div id="diy-services"></div>  
+
+	<!-- DIY PACKAGES 
+	=======================================-->
+
+	  <section class="jumbotron jumbotron-fluid text-center" >
+	        <div class="container">
+	          <h1 class="jumbotron-heading">D.I.Y. Package<!-- <a class="badge" data-toggle="tooltip" data-html="true" data-placement="right" title="<h6>Looking for a site you can update and manage yourself?</h6>You want <br><nobr class='underline'>DIY Packages</nobr>">?</a> --></h1>
+	          <p class="lead text-muted">Because sometimes it's better to do it yourself.</p>
+	        <!--   <p class="lead text-muted">Have complete control over your website from start to finish.</p> -->
+	        </div>
+	      </section>
+
+	
+	<div id="view-diy"></div>
+
+	<!-- START DIY PACKAGES -->
+		<div class="container">
+	        <div class="row featurette">
+	          <div class="col-md-7">
+	          	<h2 class="featurette-heading">D.I.Y. Website Package <br><span class="text-muted ltr-spc-sm">Imagine a website that is <span class="underline">entirely</span> yours.</span></h2>
+	            <p class="lead">I set it up.&nbsp;  I teach you how to edit it.&nbsp;  Then <span class="underline">you</span> become your own website developer.&nbsp;  <i>How cool is that?</i></p>
+
+	            <p class="lead">If you're a fairly technically savvy person and don't want to pay someone else to keep your website <nobr>up-to-date</nobr>, this is the package for you.&nbsp;  I will hold your hand through every step and you will end up with a website that is truly yours.</p>
+
+	 			<div id="accordion" role="tablist">
+
+	 				<!-- accordion #1 -->
+	 				<div class="card">
+				    <div class="card-header" role="tab" id="headingOne">
+				      <h6 class="mb-0">
+				        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				          I don't know if I'm "tech savvy"?
+				        </a>
+				      </h6>
+				    </div><!--  ./card-header -->
+
+				    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+				      <div class="card-body px-3 py-3">
+				      	<ul class="premium-list">
+				      	<label>Ask yourself:</label>
+				        <li> &nbsp;Does the idea of creating a website sound like a fun challenge?</li>
+				        <li> &nbsp;Do you set up tech like your phone with relative ease?</li>
+				        <li> &nbsp;Do you install software on your computer without trouble?</li>
+				        <li> &nbsp;Is the idea of updating and modifying your website by yourself really appealling?</li>
+				    </ul>
+				        
+				       <p>If you've answered yes to these questions, you're technically savvy enough to D.I.Y.</p>
+
+				      </div> 
+				    </div><!-- ./collapse -->
+				  </div> <!-- ./card -->
+
+				  <!-- accordion #2 
+	 				<div class="card">
+				    <div class="card-header" role="tab" id="headingOne">
+				      <h6 class="mb-0">
+				        <a data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+				          What do you mean by "service"?
+				        </a>
+				      </h6>
+				    </div> ./card-header -->
+
+				    <!-- <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+				      <div class="card-body px-3 py-3">
+				        <p>By "service" I mean you choose an online web template service.  These services allow you to build your website without having to know how to code.</p>  
+				        <p>Examples include: WordPress, Wix, SquareSpace, Weebly, etc.</p>
+				      </div> 
+				    </div> ./collapse 
+				  </div>  ./card -->
+
+				  <!-- accordion #3 
+				  <div class="card">
+				    <div class="card-header" role="tab" id="headingOne">
+				      <h6 class="mb-0">
+				        <a data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+				          How will I know which service to choose?
+				        </a>
+				      </h6>
+				    </div> ./card-header -->
+
+				   <!--  <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+				      <div class="card-body px-3 py-3">
+				        I will walk you through the pros and cons of the various services.  Most are either free or have free trials so you can try them out and choose the one you like best.  
+				      </div> 
+				    </div> ./collapse
+				  </div>  ./card -->
+				</div> <!-- ./accordion -->
+				<br>
+				 <ul class="premium-list">
+	      					<label>Package Includes:</label>
+	      					<li>Set Up and Configuration on Service of your choosing</li>
+	      					<li>Complete site set up</li>
+	      					<li>Website Design</li>
+	      					<li>Social media</li>
+	      					<li>2 hours of Video-call Tutorials</li>
+	      					<li><b>+1 FREE year website hosting</b></li>
+	                      	<li> &nbsp;<b>+1 month of <a class="link-behavior" tabindex="1" id="topnav-guru" redir="diy-diy">Go-To-Guru Membership</a></b>&nbsp;<a class="popover-dismiss d-none d-md-inline p-3" role="button" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-offset="10" title="What is Go-To-Guru?" data-content="Imagine having your very own tech guru you can call anytime you have a problem with your website.  <p>Sounds pretty awesome right?</p><p>Click link for more details.</p>"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+	                      	</li>
+	      				</ul>
+	      				 <div class="card-footer">
+			      <p>Starting at $799</p>
+			      <!-- <a href="contact/" class="btn btn-danger">Get Started</a> -->
+			      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="DIY Package">Get Started</button>
+			  </div> <!-- ./card-footer -->
+	          </div>
+
+	          
+	          <div class="col-md-5">
+	            <img class="featurette-image img-fluid mx-auto" src="assets/imgs/diy_500x500.jpg" alt="Generic placeholder image">
+	          </div>
+	        </div>
+	</div> <!-- ./container -->
+
+	        <!-- ./END DIY PACKAGES -->
+
+	</div>
+	  <div class="tab-pane fade" id="pills-guru" role="tabpanel" aria-labelledby="pills-guru-tab">
+	<!--======================================= #GURU-SERVICES =======================================-->
+
+	<div id="guru-services"></div>   
+
+	<!-- GO TO GURU 
+	=======================================-->
+
+
+	<section class="jumbotron jumbotron-fluid text-center" id="jumbo-guru">
+
+		<div class="back-button d-none" id="back-guru"><a class="text-white">❮ Back to </a></div>
+
+
+	        <div class="container">
+	          <h1 class="jumbotron-heading">Go To Guru Membership<!-- <a class="badge" data-toggle="tooltip" data-html="true" data-placement="right" title="<h6>Have you ever wanted your very own tech support guru?</h6>Check out <nobr class='underline'>Go To Guru</nobr> Membership">?</a> --></h1>
+	          <p class="lead text-muted blend">Your very own on-call tech guru.  How does it get better than that?</p>
+	        </div>
+	 </section>
+
+	<!-- START GURU -->
+	    <div class="container"> 
+	      	<div class="row">
+	      		
+	      		<div class="col-md-4">
+	      			<img src="assets/imgs/portrait.jpg" class="featurette-image img-fluid rounded-circle mx-auto portrait">
+	      		</div> <!-- ./col-md-4 -->
+	      		
+	      		<div class="col-md-8">
+	      			<h1 class="cabin-sketch">Hi! I'm Kimberly, I'll be your guru today!</h1>
+	      			<ul class="guru-list">
+	      				<label>Has this happened to you?</label>
+	      				<li class="mb-4">You googled instructions, and you're half-way through reading them, and you're thinking to yourself, "<nobr class="underline">Is this written in English?</nobr>"</li>
+	      				<li class="mb-4">You emailed customer service and the answer you received <span class="underline">didn't</span> answer your question.</li>
+	      				<li class="mb-4">You spent <i>hours</i> on the phone with a representative to fix an issue, and afterward you think, "<nobr class="underline">I will never remember how to do that again!</nobr>"</li>
+	      				<li class="mb-4">You have felt frustrated, overwhelmed, or defeated trying to do something on your website.</li>
+	      			</ul>
+	      			<h5>Tech should be fun not frustrating!</h5>
+	      			<p>Imagine for a moment that <i>anytime</i> you had <i>any</i> question about your website ... <span class="underline">any question at all</span>... you could just pick up the phone and call someone you know and trust.&nbsp;  Someone you <span class="underline">know</span> will actually help you?&nbsp;  And after the call, you not only feel confident and empowered in your tech, you also get a video of that call so you have a reference for how to fix that issue in the future!</p>
+	      			<p>Sounds pretty great right?</p>
+	      		</div> <!-- ./col-md-7 -->
+	      	</div> <!-- ./row -->
+		</div> <!-- ./container -->
+
+		<!-- MEMBERSHIP TABS -->
+	  	<div class="card membership-tabs tab-width">
+			<div class="card-header">   		
+				<ul class="nav nav-pills card-header-pills" id="myTab" role="tablist">
+				  <li class="nav-item">
+				    <a class="nav-link active" id="memb-tab" data-toggle="tab" href="#memb-1" role="tab" aria-controls="memb1" aria-selected="true">Month-to-Month</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="memb-tab" data-toggle="tab" href="#memb-2" role="tab" aria-controls="memb2" aria-selected="false">3-Month <span class="small">Save 15%</span></a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="memb-tab" data-toggle="tab" href="#memb-3" role="tab" aria-controls="memb3" aria-selected="false">6-Month <span class="small">Save 15%</span></a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="memb-tab" data-toggle="tab" href="#memb-4" role="tab" aria-controls="memb4" aria-selected="false">à la carte</a>
+				  </li>
+				</ul> <!-- ./nav-tabs -->
+			</div> <!-- ./card-header -->
+		</div> <!-- ./card membership-tabs -->
+
+		<!-- TAB CONTENT -->
+		<div class="tab-content tab-width" id="myTabContent">
+
+			<div class="tab-pane fade show active" id="memb-1" role="tabpanel" aria-labelledby="memb1-tab">
+				<div class="card-body text-center">
+				    <h1 class="price"><span class="dollar-sign">$</span>149<span class="period">/month</span></h1>
+				    <p class="card-text mt-2">Unlimited tech support emails and phone calls + corresponding video tutorials.</p>
+				     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="1-month Guru Membership">Get It Now!</button>
+				</div> <!-- ./card-body -->
+			</div>  <!-- ./tab-pane -->
+
+			<div class="tab-pane fade" id="memb-2" role="tabpanel" aria-labelledby="memb2-tab">
+				<div class="card-body text-center">
+				    <h1 class="price"><span class="dollar-sign">$</span>380<span class="period"> for 3 months</span></h1>
+				    <p class="sub-price mb-2">Save 15% when you purchase 3 or more months!</p>
+				     <p class="card-text mt-1">Unlimited tech support emails and phone calls + corresponding video tutorials.</p>
+				     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="3-month Guru Membership">Get It Now!</button>
+				</div> <!-- ./card-body -->
+			</div>  <!-- ./tab-pane -->
+
+			<div class="tab-pane fade" id="memb-3" role="tabpanel" aria-labelledby="memb3-tab">
+				<div class="card-body text-center">
+				    <h1 class="price"><span class="dollar-sign">$</span>860<span class="period"> for 6 months</span></h1>
+				    <p class="sub-price mb-2">Save 15% when you purchase 3 or more months!</p>
+				     <p class="card-text mt-1">Unlimited tech support emails and phone calls + corresponding video tutorials.</p>
+				     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="6-month Guru Membership">Get It Now!</button>
+				</div> <!-- ./card-body -->
+			</div>  <!-- ./tab-pane -->
+
+			<div class="tab-pane fade" id="memb-4" role="tabpanel" aria-labelledby="memb4-tab">
+				<div class="card-body text-center">
+				    <h1 class="price"><span class="dollar-sign">$</span>75<span class="period">/hour</span></h1>
+				    <p class="card-text mt-2">Guru time can be purchased on an hourly basis.  Includes corresponding video tutorials.</p>
+				     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Go to Guru by the hour">Get It Now!</button>
+				</div> <!-- ./card-body -->
+			</div>  <!-- ./tab-pane -->
+
+		</div> <!-- ./tab-content -->
+
+
+	<!-- ./ END GURU -->
+
+	</div>
+	  <div class="tab-pane fade" id="pills-addons" role="tabpanel" aria-labelledby="pills-addons-tab">
+
+	<!--======================================= #ADDON-SERVICES =======================================-->
+
+	<div id="addon-services"></div>
+
+	<!-- AWESOME ADD ONS  
+	=======================================-->
+
+	<section class="jumbotron jumbotron-fluid text-center mb-0">
+
+		<div class="back-button d-none" id="back-addons"><a class="text-secondary">❮ Back to </a></div>
+
+		<div class="container">
+		  <h1 class="jumbotron-heading">Awesome Add Ons<!-- <a class="badge" data-toggle="tooltip" data-html="true" data-placement="right" title="<h6>Already have a website and looking to add a little something?</h6>Check out <nobr class='underline'>Awesome Add Ons</nobr>">?</a> --></h1>
+		  <p class="lead text-muted">Already have a website? &nbsp;Add an awesome feature!</p>
+		</div>
+	</section>
+
+	<!-- ADD ONS -->
+	<div class="row justify-content-center album equal-height no-gutters">
+
+		<!-- CARD #1 -->
+	    <div class="col-xl-2 col-lg-4 col-md-6">
+	      	<div class="card">
+			    <img class="card-img-top" src="assets/imgs/mobile-ready_475x285.jpg" alt="Photo by Rodion Kutsaev on Unsplash">
+			    <div class="card-body">
+			      <h5 class="card-title">Mobile Ready</h5>
+			      <p class="card-text">Does your site look terrible on your phone?  Make it mobile ready!</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $450</p>
+			       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Mobile Ready">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+				
+		<!-- CARD #2 -->
+	    <div class="col-xl-2 col-lg-4 col-md-6">
+	      	<div class="card">
+			    <img class="card-img-top" src="assets/imgs/store_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Online Store</h5>
+			      <p class="card-text">Add an online store to your website!</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $450</p>
+			       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Online Store">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+
+		<!-- CARD #3 -->
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			 <div class="card">
+			    <img class="card-img-top" src="assets/imgs/ecourse_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">E-Course</h5>
+			      <p class="card-text">You supply the content, I supply the platform!  <nobr>Let's make an e-Course!</nobr></p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $450</p>
+			     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: e-Course">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+
+		<!-- CARD #4 -->
+	    <div class="col-xl-2 col-lg-4 col-md-6">
+	      	<div class="card">
+			    <img class="card-img-top" src="assets/imgs/scheduler_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Schedule & Booking</h5>
+			      <p class="card-text">Allow users to book a class or an appointment with you on a system made just for you!</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $450</p>
+			       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Booking">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+
+		<!-- CARD #5 -->
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			 <div class="card">
+			    <img class="card-img-top" src="assets/imgs/quiz_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Quiz</h5>
+			      <p class="card-text">The perfect start to your marketing funnel! Let's build a quiz!</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $450</p>
+			     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Quiz">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+		
+			
+	</div> <!-- ./row -->
+
+	<div class="row justify-content-center album equal-height">
+
+		<!-- CARD #6 -->
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			<div class="card">
+			    <img class="card-img-top" src="assets/imgs/sales-page_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Sales Page</h5>
+			      <p class="card-text">Need a killer sales page to launch your latest product? <nobr>I can help you!</nobr></p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $450</p>
+			      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Sales Page">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+		
+		<!-- CARD #7 -->
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			<div class="card">
+			    <img class="card-img-top" src="assets/imgs/branding_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Branding</h5>
+			      <p class="card-text">Logos, Fonts, Colors: <br>Let me help you create your brand.</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $350</p>
+			      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Branding">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+
+		<!-- CARD #8 -->
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			<div class="card">
+			    <img class="card-img-top" src="assets/imgs/crm_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Integration</h5>
+			      <p class="card-text">Have you purchased a new service and need someone to hook it up?  I can help!</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $150</p>
+			      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Integration">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+
+		
+		<!-- CARD #9 -->
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			<div class="card">
+			    <img class="card-img-top" src="assets/imgs/email_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Newsletter</h5>
+			      <p class="card-text">Let me help you stay in constant communication with your subscribers.</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $225</p>
+			      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: NewsLetter">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+		
+		
+	</div>
+
+	<div class="row justify-content-center album equal-height">
+
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			<div class="card">
+			    <img class="card-img-top" src="assets/imgs/project-management_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Project Management</h5>
+			      <p class="card-text">Have a project and no idea how to get it done?  Let me help you!</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Starting at $150</p>
+			     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Project Management">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			<div class="card">
+			    <img class="card-img-top" src="assets/imgs/design_475x285.jpg" alt="Card image cap">
+			    <div class="card-body">
+			      <h5 class="card-title">Website Assessment</h5>
+			      <p class="card-text">Don't know what your site needs to be ahead of the rest?  Get a professional opinion.</p>
+			    </div>
+			    <div class="card-footer">
+			      <p>Now only $150</p>
+			      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Website Assessment">Get It Now!</button>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+	      		
+		
+		
+
+		<div class="col-xl-2 col-lg-4 col-md-6">
+			<div class="card img-bg">
+			    <img class="card-img-top" src="assets/imgs/s_475x285.png" alt="Card image cap">
+			    <div class="card-body px-0 py-0">
+			      <h1 class="card-title text-center pt-3 px-2">Don't see what you need?</h1>
+			    </div>
+			    <div class="card-footer px-1 py-1">
+			     <!--  <button type="button" class="btn btn-danger btn-block glow-button card-consult-btn" data-toggle="modal" data-target="#contactModal" data-subject="Add On: NewsLetter">Schedule a FREE Consultation</button> -->
+
+			      <button type="button" class="btn btn-danger btn-block glow-button card-consult-btn d-none d-md-inline-block" data-toggle="modal" data-target=".scheduler-modal">Schedule a FREE Consultation</button>
+
+			    <a class="d-md-none" href="https://kimberlycooperconsulting.as.me/consultation" target="_blank">
+			    <button type="button" class="btn btn-danger btn-block glow-button card-consult-btn" >Schedule a FREE Consultation</button></a>
+			    </div> <!-- ./card-footer -->
+			</div> <!-- ./card -->
+		</div>
+</div> <!-- ./row -->
+
+	<!-- ./ADD ON SERVICES -->
+
+	</div>
+	  <div class="tab-pane fade" id="pills-general" role="tabpanel" aria-labelledby="pills-general-tab">
+
+
+	<!--======================================= #HOURLY-RATES =======================================-->
+
+	<div id="hourly-rates"></div>
+
+
+	<!-- GENERAL SERVICES HOURLY RATES 
+	=======================================-->
+
+	<section class="jumbotron jumbotron-fluid text-center" >
+		<div class="container">
+		  <h1 class="jumbotron-heading">General Services Hourly Rates</h1>
+		   <!-- <p class="lead text-muted">Starting at $50/hr</p> -->
+		</div>
+	</section>
+
+
+
+	<div class="container">
+	    <div class="row justify-content-center">
+	      
+	      <div class="col-md-5 order-md-2">
+
+	      	<table class="table table-striped">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">Service</th>
+			      <th scope="col">Price per hour</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="row">Project Management <p class="small">Agile/SCRUM, Full development life cycle</p></th>
+			      <td>$150</td>
+			      
+			    </tr>
+			    <th scope="row">Programming <p class="small">MERN Stack, <nobr>Vanilla JavaScript</nobr>, ES6, JQuery, MySQL, NoSQL, HTML5</p></th>
+			      <td>$125</td>
+			      
+			    </tr>
+			    <tr>
+			      <th scope="row">Styling & Responsive Coding <p class="small">CSS, CSS Frameworks, Front-End Libraries(Bootstrap, Semantic-UI)</p></th>
+			      <td>$115</td>
+			      
+			    </tr>
+			    <tr>
+			      <th scope="row">Website Design <p class="small">IA/UI/UX, Visual Hierarchy, Responsive Design, Accessibility </p></th>
+			      <td>$95</td>
+			      
+			    </tr>
+			    <tr>
+			      <th scope="row">Graphic Design <p class="small">Branding, Logo, Graphics, Optimization, Fonts, Colors, Layout, Wireframes</p></th>
+			      <td>$95</td>
+			      
+			    </tr>
+			    <tr>
+			      <th scope="row">Audio/Video Editing <p class="small">Filters, Effects, Editing, Compression</p></th>
+			      <td>$75</td>
+			      
+			    </tr>
+			    <tr>
+			      <th scope="row">Go-To-Guru Hourly <p class="small">Personalized technical support</p></th>
+			      <td>$75</td>
+			      
+			    </tr>
+			    <tr>
+			      <th scope="row">Research</th>
+			      <td>$75</td>
+			      
+			    </tr>
+			    <tr>
+			      <th scope="row">Consulting</th>
+			      <td>$125</td>
+			      
+			    </tr>
+			    <tr>
+			      <th scope="row">Emergency Rates</th>
+			      <td>1.5x per hour</td>
+			    </tr>
+			    <tr>
+			    	 <td colspan="2" class="py-2 px-0"><!-- <a href="contact/" class="btn btn-danger btn-block py-3">Contact Me</a> -->
+			    	 	<button type="button" class="btn btn-danger btn-block py-3" data-toggle="modal" data-target="#contactModal" data-subject="General Service Request">Contact Me</button>
+			    	 </td>
+			    </tr>
+			    
+			  </tbody>
+			</table>
+	      	
+	      </div> <!-- ./col-lg-4 -->
+	      <div class="col-md-5 order-md-1">
+	      	<img class="img-fluid border border-light" src="assets/imgs/general-services_500x500.jpg" alt="Photo by Hipster Mum on Unsplash">
+	      </div>
+	    </div> <!-- ./row -->
+	      	
+	</div> <!-- ./container -->
+
+		<!-- ./GENERAL SERVICES -->
+
+	</div> <!-- ./tab-pane -->
+	</div> <!-- ./tab-nav -->
+
+
+	<!-- BOTTOM MENU 
+	=======================================-->
+
+	<ul class="nav nav-pills justify-content-center bottom-menu mb-3 pt-3" id="top-menu" role="tablist">
+	  <li class="nav-item">
+	    <a class="nav-link active" id="botnav-premium" href="#pills-premium" role="tab" aria-controls="pills-premium" aria-selected="true" data-toggle="pill"><i class="fa fa-diamond fa-1" aria-hidden="true"></i>Premium Packages</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="botnav-value" href="#pills-value" role="tab" aria-controls="pills-value" aria-selected="false" data-toggle="pill">
+		    	<i class="fa fa-star-o fa-1" aria-hidden="true"></i>Value Packages</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="botnav-diy" data-toggle="pill" href="#pills-diy" role="tab" aria-controls="pills-diy" aria-selected="false">
+	    	<i class="fa fa-heart-o fa-1" aria-hidden="true"></i>DIY Package</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="botnav-guru" data-toggle="pill" href="#pills-guru" role="tab" aria-controls="pills-guru" aria-selected="false"><i class="fa fa-life-ring fa-1" aria-hidden="true"></i>Go To Guru</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="botnav-addons" data-toggle="pill" href="#pills-addons" role="tab" aria-controls="pills-addons" aria-selected="false"><i class="fa fa-plus fa-1" aria-hidden="true"></i>Awesome Add Ons</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="botnav-general" data-toggle="pill" href="#pills-general" role="tab" aria-controls="pills-general" aria-selected="false"><i class="fa fa-question-circle-o fa-1" aria-hidden="true"></i>General Services</a>
+	  </li>
+	</ul>
+
+
+	<!-- ./ BOTTOM MENU -->
+
+
+</div> <!-- ./ END MAIN COLLAPSE -->
+
+
+<!-- FINAL CLICK FUNNEL  
+=======================================-->
+
+<section class="jumbotron jumbotron-fluid text-center final-funnel mb-0" >
+    <div class="container">
+      <h3 class="jumbotron-heading">Not sure what you need?</h3>
+      <p>
+        <!-- <button type="button" class="glow-button my-3" data-toggle="modal" data-target=".scheduler-modal">Click HERE to schedule a free consultation <i class="fa fa-mouse-pointer fa-1" aria-hidden="true"></i></button> -->
+        <button type="button" class="glow-button  d-none d-md-inline-block" data-toggle="modal" data-target=".scheduler-modal">Click HERE to schedule a free consultation <i class="fa fa-mouse-pointer fa-1" aria-hidden="true"></i></button>
+			    <a class="d-md-none" href="https://kimberlycooperconsulting.as.me/consultation" target="_blank">
+			    <button type="button" class="glow-button" >Click HERE to schedule a free consultation <i class="fa fa-mouse-pointer fa-1" aria-hidden="true"></i></button></a>
+      </p>
+      <p class="my-3">&nbsp;</p>
+    </div>
+</section>
+   
+
+ 
+</main>
+
+
+
+<!-- FOOTER 
+=======================================-->
+
+<footer>
+  <div class="container">
+   <div class="row justify-content-center no-gutters">
+    	<div class="col-md-3 footer-col">
+    		<div class="footer-item-left">
+				<i class="fa fa-phone" aria-hidden="true"></i>
+    		</div>
+    		<div class="footer-item-right">
+    		  <a href="tel:619-537-9440">
+    			<p><strong>Call</strong><br>619.537.9440</p>
+    		  </a>
+    		</div>
+    	</div> <!-- ./footer-col -->
+
+    	<div class="col-md-5 footer-col">
+    		<div class="footer-item-left">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+    		</div>
+    		<div class="footer-item-right">
+    		  <a data-toggle="modal" data-target="#contactModal" data-subject="Contact Me">
+    			<p><strong>Email</strong><br>kimberly@kimberlycooper.me</p>
+    		  </a>
+    		</div>
+    	</div>  <!-- ./footer-col -->
+
+    	<div class="col-md-4 footer-col">
+    		<div class="footer-item-left">
+				<i class="fa fa-copyright" aria-hidden="true"></i>
+    		</div>
+    		<div class="footer-item-right">
+    			<p class="copyright"><nobr><span id="currentyear"></span> Kimberly Cooper</nobr></p>
+    		</div>
+    	</div> 
+    </div>
+  </div>
+</footer>
+
+<!-- ./ FOOTER -->
+
+
+<!-- SCROLL TOP 
+=======================================-->
+
+ <div id="stop" class="scrollTop d-none d-md-block">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    
+</div>
+<p class="scrollTopTxt">Top</p>
+
+
+<!--======================================= JAVASCRIPT =======================================-->
+
+<!-- Bootstrap core
+    ================================================== -->
+    
+    <script>window.jQuery || document.write('<script src="public/script/jquery.min.js"><\/script>')</script>
+    <!-- Bootstrap Complete Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- ./bootstrap core -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+     ================================================== -->
+    <script src="public/script/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Acuity Scheduler 
+     ================================================== -->
+    <script src="https://d3gxy7nm8y4yjr.cloudfront.net/js/embed.js" type="text/javascript"></script>
+
+    <!-- Index JS
+     ================================================== -->
+    <!-- <script type="text/javascript" src="public/script/index.js"></script> -->
+    <script type="text/javascript" src="./public/script/rotate-text.js"></script>
+   	<!-- <script type="text/javascript" src="./public/script/scroll.js"></script> -->
+    <script type="text/javascript">
+		$( window ).on( "load", function() {  	
+
+			console.log('ready')
+
+
+		/* FORM SUBMISSION
+		=======================================================*/
+
+   		$('[id^="inline-form-"]').submit(function(e){
+		    e.preventDefault();
+		    var objID = e.target.id
+		    var subval = objID.substr(12) 
+		   
+		    $.ajax({
+		        url:'/cgi-bin/FormMail.pl',
+		        type:'post',
+		        data:$('#'+objID).serialize(),
+		        success:function(){
+		          //whatever you wanna do after the form is successfully submitted
+		          $('#'+objID).parent().addClass('d-none')
+		    	  $('#success-'+ subval).removeClass('d-none')
+		        },
+		        error: function (err) {
+		          console.log('loading Ajax failure' + JSON.stringify(err));
+		          $('#'+objID).parent().addClass('d-none')
+		    	  $('#error-'+ subval).removeClass('d-none')
+		    	  $('#err-' +subval.substr(0,4)+'-txt').text('ERR ID:: loading Ajax failure')
+		        },
+		    	onFailure: function (err) {
+		          console.log('Ajax Failure' + JSON.stringify(err));
+		          $('#'+objID).parent().addClass('d-none')
+		    	  $('#error-'+ subval).removeClass('d-none')
+		    	  $('#err-' +subval.substr(0,4)+'-txt').text('ERR ID:: Ajax failure')
+		    	},
+		    	statusCode: {
+		          404: function(err) {
+		          console.log("missing info" + JSON.stringify(err));
+		          $('#'+objID).parent().addClass('d-none')
+		    	  $('#error-'+ subval).removeClass('d-none')
+		    	  $('#err-' +subval.substr(0,4)+'-txt').text('ERR ID:: 404 missing info')
+		          }   
+		    	}
+		    });
+		});
+
+
+		/* CUSTOM MODAL SUBJECT
+		=======================================================*/
+    	$('#contactModal').on('show.bs.modal', function (event) {
+    	  resetModal()
+		  var button = $(event.relatedTarget) // Button that triggered the modal
+		  var subj = button.data('subject') // Extract info from data-* attributes
+		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+		  var modal = $(this)
+		  modal.find('#contactModalLabel').text(subj)
+		  modal.find('#subj').val("KC Consulting: "+subj)
+		})
+
+
+   		/* RESET MODAL FORM
+		=======================================================*/
+
+		function resetModal(e){
+			console.log("RESET")
+			$('#inline-form-modal').trigger('reset')
+			$('#inline-form-modal').parent().removeClass('d-none')
+			$('#success-modal').addClass('d-none')
+			$('#error-modal').addClass('d-none')
+		}
+
+
+    	/* TOP NAV
+		=======================================================*/
+
+    	$('#nav-home').on('click', function(e){
+    		showSection('main')
+    		updateqs(undefined,undefined);
+    		$('.scrollTop').trigger('click');
+    	})
+
+    	$('.navbar-brand').on('click', function(e){
+			$('#nav-home').trigger('click');
+		})
+
+    	$('#nav-portfolio').on('click', function(e){
+    		showSection('portfolio')
+    		updateqs('view','portfolio');
+    		$('.scrollTop').trigger('click');
+    	})
+
+    	function showSection (show){
+    		if(show == 'portfolio'){
+				$('#collapsePortfolio').collapse('show');
+	    		$('#collapseMain').collapse('hide'); 
+	   			
+	    		if(!$('#nav-portfolio').parent().hasClass('active')){
+	    			$('#nav-portfolio').parent().addClass('active')
+	    		}
+	    		if($('#nav-home').parent().hasClass('active')){
+	    			$('#nav-home').parent().removeClass('active')
+	    		}
+    		}else{
+    			$('#collapseMain').collapse('show');
+	    		$('#collapsePortfolio').collapse('hide'); 
+	   			
+	    		if(!$('#nav-home').parent().hasClass('active')){
+	    			$('#nav-home').parent().addClass('active')
+	    		}
+	    		if($('#nav-portfolio').parent().hasClass('active')){
+	    			$('#nav-portfolio').parent().removeClass('active')
+	    		}
+    		}
+    	}
+
+    	var redirVal = undefined;
+    	var sectionVal = undefined;
+    	var packageVal = undefined;
+
+		$('[id^="topnav-"]').on('click', function (e) {
+			var navLink = e.target.id.substr(7);
+			//
+			showSection('main');
+			//
+  			$("#top-menu a[href='#pills-" + navLink +"']").tab('show');
+  			//
+  			$("#botnav-" + navLink).parent().addClass("active");
+
+  			//
+  			console.log('update topnav')
+  			updateqs('section',navLink);
+
+  			//
+  			 var tgt = $("#view-area").position();
+  			 $('html, body').animate({
+		      scrollTop: tgt.top-60
+		    }, 500);
+
+  			// BACK BUTTON MODS
+  			if($(this).attr('redir') != undefined){
+  				redirVal = $(this).attr('redir');
+  				sectionVal = redirVal.substr(0, redirVal.indexOf('-'));
+  				packageVal = redirVal.substr(redirVal.indexOf('-')+1);
+  				$('#back-'+ navLink).removeClass('d-none');
+  				//
+  				var sectTitle;
+  				if(packageVal === 'presence') sectTitle='Web Presence Package';
+  				else if(packageVal === 'upgrade') sectTitle='Premium Website Upgrade';
+  				else if(packageVal === 'solopreneur') sectTitle='Solopreneur Starter';
+  				else if(packageVal === 'ecommerce') sectTitle='eCommerce Start-Up';
+  				else if(packageVal === 'diy') sectTitle='D.I.Y. Website Package';
+  				else sectTitle='';
+
+  				$( '#back-'+ navLink +' a' ).text("❮ Back to " + sectTitle);
+  			}
+
+		})
+
+		$('[id^="back-"]').on('click', redirectPage);
+
+		function redirectPage(e){
+			$("#top-menu a[href='#pills-" + sectionVal+"']").tab('show');
+			var href = "#view-"+packageVal;
+			console.log('update redirectPage')
+			updateqs('package',packageVal);
+  			 window.setTimeout( function(){
+  			 var tgt = $(href).position()
+  			   $('html, body').animate({
+		     	 scrollTop: tgt.top-60
+		    	}, 500);
+  			 }, 200 ); 
+  			 redirVal = undefined;
+  			 sectionVal = undefined;
+  			 packageVal = undefined;
+  			 if(e) $(e.target).parent().addClass('d-none');
+		}
+
+
+		/* BOTTOM NAV
+		=======================================================*/
+
+		// MAKE BOTTOM MENU REFLECT TOP MENU SELECTIONS
+    	$('[id^="pills-"]').on('click', function (e) {
+  			$('[id^="botnav-"]').each(function() {
+    			$(this).removeClass('active')
+			});
+			var str = e.target.id.slice(6, -4)
+  			$("#botnav-" + str).addClass("active")
+  			console.log('update pills')
+  			updateqs('section',str);
+    	})
+
+		$('[id^="botnav-"]').on('click', function (e) {
+  			$("#top-menu a[href='#pills-" + e.target.id.substr(7)+"']").tab('show') 
+  			console.log('update botnav')
+  			updateqs('section',e.target.id.substr(7));
+  			 var tgt = $("#view-area").position()
+  			  window.setTimeout( function(){
+  			 $('html, body').animate({
+		      scrollTop: tgt.top-60
+		     }, 500);
+  			}, 600 );   
+		})
+
+		/* CAROUSEL BUTTONS
+		=======================================================*/
+
+		$('[id^="carnav-"]').on('click', function (e) {
+  			$("#top-menu a[href='#pills-" + e.target.id.substr(7)+"']").tab('show') 
+  			 var href = $(this).attr('view-tgt')
+  			 console.log('update carnav')
+  			 updateqs('package',href.substr(6));
+  			 console.log(href)
+  			 window.setTimeout( function(){
+  			 var tgt = $(href).position()
+  			   $('html, body').animate({
+		     	 scrollTop: tgt.top-60
+		    	}, 500);
+  			 }, 200 ); 
+		})
+
+		/* PAGE QUERY
+		=======================================================*/
+
+		function getqsv() {
+			
+			var qs = window.location.search.substring(1);
+			var v = qs.split('&');
+			//
+			var arr = ['section','package','view']
+			for(var j=0; j<arr.length; j++){
+				param = arr[j];
+				for (var i=0;i<v.length;i++) {
+					var p = v[i].split('=');
+					if (p['0'] == param) { return {v: param, val:p['1']}; }
+				}
+			}
+			return null;
+		}
+
+		function updatePage(obj){
+			if(obj == null) return null;
+			var v = obj.v;
+			var val = obj.val;
+
+			console.log(v+', '+val)
+
+			if(v == 'view'){
+				$('#nav-portfolio').trigger('click');
+			}else if(v == "package"){
+				if(val == 'solopreneur' || val == 'ecommerce'){
+					sectionVal='value'
+				}else if (val == 'presence' || val == 'upgrade'){
+					sectionVal='premium'
+				}else{
+					sectionVal='diy'
+				}
+				packageVal = val;
+				redirectPage();
+			}else{
+				$('#topnav-'+val).trigger('click');
+			}
+		}
+
+		updatePage(getqsv());
+
+		function updateqs(param,value) {
+			var new_url = '?';
+
+			console.log(param+', '+value)
+
+			if(param != undefined) new_url +=  param + '=' + value;
+
+			history.pushState(null, null, new_url);
+		}
+
+
+		/* SCROLL TO TOP BUTTON
+		=======================================================*/
+
+
+		// declare variable
+		  var scrollTop = $(".scrollTop");
+		  var scrollTxt = $(".scrollTopTxt");
+
+		  $(window).scroll(function() {
+		    // declare variable
+		    var topPos = $(this).scrollTop();
+
+		    // if user scrolls down - show scroll to top button
+		    if (topPos > 100) {
+		      $(scrollTop).css("opacity", "1"); 
+		    } else {
+		      $(scrollTop).css("opacity", "0");
+		      $(scrollTxt).css("opacity", "0");
+		    }
+
+		  }); // scroll END
+
+		  $(scrollTop).mouseover(function() {
+		  	if($(window).scrollTop() >100){
+				$(scrollTxt).css("opacity", "1");
+			}
+		  });
+
+		  $(scrollTop).mouseout(function() {
+			$(scrollTxt).css("opacity", "0");
+		  });
+
+
+		  //Click event to scroll to top
+		  $(scrollTop).click(function() {
+		    $('html, body').animate({
+		      scrollTop: 0
+		    }, 500);
+
+		  }); // click() scroll top END
+    	
+
+		  /* TOOL TIP
+		=======================================================*/
+
+		$("[data-toggle=tooltip]").tooltip({container: 'body'});
+
+
+		/* POPOVER
+		=======================================================*/
+
+		$('.popover-dismiss').popover({
+			container: 'body',
+			trigger: 'hover'
+		})
+
+		var popover;
+		$('.popover-dismiss').on('show.bs.popover', function(e){
+			popover = $(this)
+		})
+
+
+
+		/* DYNAMIC YEAR
+		=======================================================*/
+		var year = (new Date).getFullYear();
+		$('#currentyear').text(year);
+
+		var number = year-2000;
+		$('#extime').text(number);		
+
+
+
+
+    	/* CAROUSEL
+		=======================================================*/
+    	$('.carousel').carousel({
+ 			 interval: 10000
+		});
+
+    	var carCnt = 0;
+		$('.carousel').on('slid.bs.carousel', function (e) {
+		  if(++carCnt === 10){
+            $('.carousel').carousel('pause');       
+		  }
+		})
+
+
+    	/* PORTFOLIO DETAILS COLLAPSE
+		=======================================================*/
+
+		$('[id^="pCollapse-"]').on('click', function(){
+  			var text = $(this).text();
+
+		  if (text == '▼ View more details about this website') {
+		    $(this).text('▲ View fewer details about this website');
+		  }
+		  else{
+		    $(this).text('▼ View more details about this website');
+		  }
+		});
+
+	  })
+    </script>
+</body>
+</html>

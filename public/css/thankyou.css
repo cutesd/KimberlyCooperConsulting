@@ -1,0 +1,16 @@
+
+.jumbotron{
+	width:585;
+	height:255;
+	position:absolute;
+    left:50%;
+    top:50%;
+    margin:-175px 0 0 -292px;
+    background-color:#FFF;
+    padding: 0;
+}
+
+.fa-6{
+	font-size: 6rem;
+	color:#f5845b;
+}

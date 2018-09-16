@@ -1,0 +1,207 @@
+/* ======================== */
+/*   Syed Sahar Ali Raza   	*/
+/* ========================	*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+
+body{background-color:#eee;}
+
+#generic_price_table{
+	background-color: #f0eded;
+}
+
+/*PRICE COLOR CODE START*/
+.generic_content{
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background-color: #fff;
+}
+
+.generic_head_price{
+	margin: 0 0 20px 0;
+	background-color: #f6f6f6;
+}
+
+.head_bg{
+	border-style: solid;
+    border-width: 90px 1411px 23px 399px;
+	position: absolute;
+	border-color: #e4e4e4 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #e4e4e4;
+}
+
+.head {
+	padding-top: 40px;
+	position: relative;
+	z-index: 1;
+	color: #525252;
+}
+
+.head span{
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.price{
+	color: #414141;
+}
+
+
+.generic_feature_list ul li{	
+	color: #a7a7a7;
+	font-size: 18px;
+	padding: 15px 0;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.generic_feature_list ul li span{
+	color: #414141;
+}
+.generic_feature_list ul li:hover{
+	background-color: #E4E4E4;
+	border-left: 5px solid #f5845b;
+	transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+.generic_price_btn{
+	margin: 20px 0 32px;
+}
+
+.generic_price_btn button{
+	border: 1px solid #f5845b; 
+    color: #f5845b;
+     border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	-webkit-border-radius: 50px;
+    display: inline-block;
+    font-size: 18px;
+    outline: medium none;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+} 
+
+.generic_content.active .head_bg,
+.generic_content:hover .head_bg{
+	border-color: #f5845b rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #f5845b;
+	color: #fff;
+}
+
+.generic_content:hover .head,
+.generic_content.active .head{
+	color: #fff;
+}
+
+#generic_price_table .generic_content:hover .generic_price_btn button,
+#generic_price_table .generic_content.active .generic_price_btn button{
+	background-color: #f5845b;
+	color: #fff;
+} 
+#generic_price_table{
+	margin: 50px 0 50px 0;
+}
+.row .table{
+    padding: 28px 0;
+}
+
+.generic_head_content{
+	margin: 0 0 50px 0;
+}
+
+
+.generic_price_tag{
+	padding: 0 0 20px;
+}
+
+.price{
+	display: block;
+	font-family: "Lato",sans-serif;
+	font-weight: 400;
+}
+
+.sign{
+    display: inline-block;
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.currency{
+   font-weight: 300;
+    font-size: 60px;
+    letter-spacing: -2px;
+    line-height: 60px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.month{
+    font-size: 18px;
+    letter-spacing: 1px;
+    vertical-align: bottom;
+}
+
+.generic_feature_list ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/*#generic_price_table .generic_content .generic_feature_list ul li .fa{
+	padding: 0 10px;
+}*/
+
+
+.generic_content,
+.generic_content:hover,
+.generic_content .head_bg,
+.generic_content:hover .head_bg,
+.generic_content .price,
+.generic_content:hover .price,
+.generic_content .generic_price_btn button,
+.generic_content:hover .generic_price_btn button{
+	transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+} 
+
+
+@media (max-width: 767px) {
+	#generic_price_table{
+		padding-bottom: 10rem!important;
+	}
+	.container {
+    max-width: 100%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	.container {
+    max-width: 100%;
+	}
+
+	#generic_price_table .col-md-4{
+		float:left;
+		width:50%;
+		padding-left: 2px;
+    	padding-right: 2px;
+	}
+	
+	#generic_price_table .generic_content{
+		margin-bottom:75px;
+	}
+}
+
+
+

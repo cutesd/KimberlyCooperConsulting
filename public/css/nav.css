@@ -1,0 +1,124 @@
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
+
+@media (max-width: 370px) {
+    .navbar-brand > img {
+    width:200px;
+	}
+}
+
+.navbar.bg-light{
+	background-color:#FFF!important;
+	/*border-bottom:5px solid #e16326;*/
+	box-shadow: 10px 0px 10px #666;
+	padding:0;
+}
+
+/*deprecated*/
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover{
+	color:white;
+	background-color: #e16326; /*orange*/
+}
+
+
+.navbar .navbar-nav>.open>a, .navbar .navbar-nav>.open>a:focus, .navbar .navbar-nav>.open>a:hover{
+	background-color: #eec261; /*gold*/
+	cursor: pointer;
+}
+
+.navbar .navbar-nav>li>a:hover{
+	background-color: #eec261; /*gold*/
+	cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color:#333;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+	color:#FFF;
+	/*font-weight: bold;*/
+	background-color: #f16a39; /*orange*/
+}
+
+.navbar-collapse.collapse.show .navbar-nav .nav-item > .nav-link{
+	padding-left: 2rem;
+	/*font-weight: bold;*/
+}
+
+.nav-item.active>a:focus, .nav-item.active>a:hover {
+	background-color: #f16a39;  /*orange*/
+	color:white;
+}
+
+
+.navbar-fixed-top {
+    min-height: 65px;
+}
+
+.navbar-brand {
+	padding: 0;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 65px;
+}
+
+
+.dropdown-menu{
+	background-color:rgba(255, 255, 255, .9);
+	margin-top:0;
+	border-radius: 0;
+	box-shadow: 0px 2px 5px darkgrey;
+    border: none;
+}
+
+.dropdown-header{
+	display: block;
+    padding: .8rem 1.5rem;
+    margin-bottom: 0;
+    font-size: .9rem;
+    color: #FFF;
+    white-space: nowrap;
+    background-color: rgba(241,132,80,.75);
+}
+
+.start-here h5{
+	margin-top:1rem;
+}
+
+.start-here a{
+	background-color:#FFF;
+}
+
+.start-here a:nth-child(even) {
+    background-color: #e2e2e2;
+}
+
+.dropdown-divider{
+	border: 1px solid rgba(110,110,0,.15);
+}
+
+.dropdown-item{
+	cursor:pointer;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+	background-color: #eec261;
+}
+
+
+
+
+
