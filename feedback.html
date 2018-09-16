@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+	<meta name="description" content="Kimberly Cooper Consulting: Innovative Web Solutions made just for you.  18 years experience developing and managing development of interactive content for web and mobile devices.  JavaScript enthusiast and website guru wanting to bring my years of expertise to you.">
+	<meta name="author" content="Kimberly Cooper">
+	<link rel="icon" href="favicon.ico">
+
+	<title>KCC Client Feedback Survey</title>
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	 media="all">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
+
+	<style type="text/css">
+		body,
+		html {
+			margin: 0 !important;
+			width: 100%;
+			height: 100%;
+		}
+
+		body {
+			background-color: #F8F3F0;
+			font-family: 'Quicksand', sans-serif;
+		}
+
+		footer {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			line-height: 0;
+			font-size: .75rem;
+		}
+
+		p {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<!-- FOOTER 
+=======================================-->
+
+	<footer>
+		<div class="row justify-content-center">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<p>
+					<nobr><i class="fa fa-copyright" aria-hidden="true"></i> <span id="currentyear"></span> Kimberly Cooper Consulting</nobr>
+					| <a href="/">Home Page</a>
+				</p>
+			</div>
+			<div class="col-3"></div>
+		</div>
+	</footer>
+
+	<!-- ./ FOOTER -->
+
+	<script type="text/javascript" src="https://form.jotform.com/jsform/81486413684161"></script>
+	<script>window.jQuery || document.write('<script src="public/script/jquery.min.js"><\/script>')</script>
+	<!-- Bootstrap Complete Javascript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(window).on("load", function () {
+			/* DYNAMIC YEAR
+				=======================================================*/
+			var year = (new Date).getFullYear();
+			$('#currentyear').text(year);
+		})
+	</script>
+</body>
+
+</html>
