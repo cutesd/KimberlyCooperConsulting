@@ -8,6 +8,10 @@ _::-webkit-full-page-media, _:future, :root body {
 
 }
 
+:root {
+  --clr-gold: #eec261
+}
+
 body{
 	font-family: 'Lato', sans-serif;
  
@@ -24,7 +28,7 @@ a{
 }
 
 a:hover {
-  color:#eec261;
+  color:var(--clr-gold);
 }
 
 :focus{
@@ -135,17 +139,6 @@ a#memb-tab.nav-link:hover{
 /* GRID 
 -------------------------------------------------- */
 
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 .row.equal-height > [class*='col-'] {
     display: flex;
     padding-right: 2px;
@@ -155,8 +148,7 @@ a#memb-tab.nav-link:hover{
 /* BUTTON 
 -------------------------------------------------- */
 
-.btn-danger{
-	background: #00949c;
+.btn-danger, .btn-secondary{
 	border:none;
   border-radius: 0;
   letter-spacing: 1px;
@@ -165,14 +157,19 @@ a#memb-tab.nav-link:hover{
    -moz-osx-font-smoothing: auto;
 }
 
-.btn-danger:hover, .btn-danger:active, .btn-danger:focus, .btn-danger:active:focus, .btn-danger:active:hover{
-	background-color: #eec261;
+.btn-danger{
+  background: #00949c;
+}
+
+.btn-danger:hover, .btn-danger:active, .btn-danger:focus, .btn-danger:active:focus, .btn-danger:active:hover,
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus, .btn-secondary:active:focus, .btn-secondary:active:hover{
+	background-color: var(--clr-gold);
 	border:none;
   box-shadow:none;
 }
 
 .bg-gold{
-	background-color: #eec261;
+	background-color: var(--clr-gold);
 	border:none;
 	
 }
