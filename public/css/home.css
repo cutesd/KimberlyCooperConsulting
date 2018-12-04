@@ -984,10 +984,6 @@ dark gray:  #424b54;*/
     top: 43%
   }
 
-  #sm-form.no-gutters{
-
-  }
-
   .featurette-heading{
     font-size:1.9rem;
   }
@@ -1045,6 +1041,8 @@ dark gray:  #424b54;*/
 .carousel-caption h1.c6-blackboard{
     padding-bottom: 5rem;
   }
+
+
 
   .album{
     margin:0;

@@ -35,7 +35,7 @@
 	<!--======================================= MODALS =======================================-->
 
 	<!-- MODAL - CONTACT 
-=======================================-->
+		=======================================-->
 
 	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
@@ -243,8 +243,6 @@
 					</div> <!-- ./col -->
 				</div> <!-- ./row justify-content-center -->
 
-
-
 			</div> <!-- ./ two-tone-gray -->
 
 
@@ -252,7 +250,8 @@
 			<!-- INLINE EMAIL FORM -->
 
 			<div class="row justify-content-center mx-0">
-				<div class="col-sm-12 col-md-10 col-lg-9 col-xl-7">
+				<div class="col-sm-12 col-md-10 col-xl-8">
+					<!-- col-sm-12 col-md-10 col-lg-10 col-xl-8 email-form -->
 
 					<div class="row">
 						<div class="col-12 form2 text-center pt-5">
@@ -270,14 +269,14 @@
 								<input type="hidden" name="required" value="name,email,subject" />
 
 								<div class="row no-gutters px-1 mt-2">
-									<div class="col-12 col-md-4">
+									<div class="col-12 col-lg-4">
 										<div class="input-group mb-1">
 											<span class="input-group-addon tall" id="prepend-name"><i class="fa fa-user-circle-o fa-2" aria-hidden="true"></i></span>
 											<input type="text" class="form-control border-gray tall" name="name" placeholder="Your name"
 											 aria-describedby="prepend-name" required>
 										</div> <!-- ./input-group -->
 									</div>
-									<div class="col-12 col-md-4">
+									<div class="col-12 col-lg-4">
 										<div class="input-group mb-1">
 											<span class="input-group-addon tall" id="prepend-email"><i class="fa fa-at fa-2" aria-hidden="true"></i></span>
 											<input type="email" class="form-control border-gray tall" name="email" placeholder="Your email"
@@ -287,7 +286,7 @@
 											</div>
 										</div><!-- ./input-group -->
 									</div>
-									<div class="col-12 col-md-4">
+									<div class="col-12 col-lg-4">
 										<button class="btn btn-outline-danger btn-lg btn-block email-form-button">Submit</button>
 									</div>
 								</div> <!-- ./row -->
@@ -1586,8 +1585,8 @@
 	=======================================-->
 			<div class="two-tone-orange py-5">
 
-				<div class="row justify-content-center mx-0">
-					<div class="col-sm-12 col-md-8 col-lg-7 col-xl-6 email-form">
+				<div class="row justify-content-center mx-1 mx-md-0">
+					<div class="col-sm-12 col-md-10 col-lg-10 col-xl-8 email-form">
 
 						<div class="row align-items-center">
 							<div class="col-12 form-top">
@@ -1615,14 +1614,14 @@
 									<input type="hidden" name="required" value="name,email,subject" />
 
 									<div class="row no-gutters px-1 mt-2">
-										<div class="col-12 col-md-4">
+										<div class="col-12 col-lg-4">
 											<div class="input-group mb-1">
 												<span class="input-group-addon tall" id="prepend-name"><i class="fa fa-user-circle-o fa-2" aria-hidden="true"></i></span>
 												<input type="text" class="form-control tall" name="name" placeholder="Your name" aria-describedby="prepend-name"
 												 required>
 											</div> <!-- ./input-group -->
 										</div>
-										<div class="col-12 col-md-4">
+										<div class="col-12 col-lg-4">
 											<div class="input-group mb-1">
 												<span class="input-group-addon tall" id="prepend-email"><i class="fa fa-at fa-2" aria-hidden="true"></i></span>
 												<input type="email" class="form-control tall" name="email" placeholder="Your email" aria-describedby="prepend-email"
@@ -1632,7 +1631,7 @@
 												</div>
 											</div><!-- ./input-group -->
 										</div>
-										<div class="col-xs-12 col-md-4">
+										<div class="col-12 col-lg-4">
 											<button class="btn btn-outline-danger btn-lg btn-block email-form-button">Submit</button>
 										</div>
 									</div> <!-- ./row -->
@@ -2241,6 +2240,23 @@
 					<!-- ADD ONS -->
 					<div class="row justify-content-center album equal-height no-gutters">
 
+						<!-- CARD #5 -->
+						<div class="col-xl-2 col-lg-4 col-md-6">
+								<div class="card">
+									<img class="card-img-top" src="assets/imgs/quiz2_475x285.jpg" alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title">Click-Bait Quiz</h5>
+										<p class="card-text">Everything you need to build your client base NOW!</p>
+									</div>
+									<div class="card-footer">
+										<p>All-inclusive $999</p>
+										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Quiz">Get
+											It Now!</button>
+									</div> <!-- ./card-footer -->
+								</div> <!-- ./card -->
+							</div>
+	
+
 						<!-- CARD #1 -->
 						<div class="col-xl-2 col-lg-4 col-md-6">
 							<div class="card">
@@ -2306,22 +2322,7 @@
 							</div> <!-- ./card -->
 						</div>
 
-						<!-- CARD #5 -->
-						<div class="col-xl-2 col-lg-4 col-md-6">
-							<div class="card">
-								<img class="card-img-top" src="assets/imgs/quiz_475x285.jpg" alt="Card image cap">
-								<div class="card-body">
-									<h5 class="card-title">Quiz</h5>
-									<p class="card-text">The perfect start to your marketing funnel! Let's build a quiz!</p>
-								</div>
-								<div class="card-footer">
-									<p>Starting at $450</p>
-									<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" data-subject="Add On: Quiz">Get
-										It Now!</button>
-								</div> <!-- ./card-footer -->
-							</div> <!-- ./card -->
-						</div>
-
+						
 
 					</div> <!-- ./row -->
 
